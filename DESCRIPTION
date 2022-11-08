@@ -5,7 +5,7 @@ Authors@R:
     person("Mack", "Case", , "hcase@smith.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID")),
     person("Parunjodhi", "Munisamy", , "pmunisamy@smith.edu", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "YOUR-ORCID-ID")),
     person("Michel", "Ruiz-Fuentes", , "mruizfuentes@smith.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
