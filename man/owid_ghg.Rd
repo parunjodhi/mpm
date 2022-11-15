@@ -27,6 +27,6 @@ A data frame with 1,827 rows and 7 columns:
 owid_ghg
 }
 \description{
-A subset of CO2 and Greenhouse Gas (GHG) Emissions data filtered by countries in North America. The original data was acquired and maintained by \href{https://github.com/owid/co2-data}{Our World in Data}
+A subset of CO2 and Greenhouse Gas (GHG) Emissions data filtered by countries in North America. The original data was acquired, aggregated and maintained by Hannah Ritchie, Max Roser, Edouard Mathieu, Bobbie Macdonald and Pablo Rosado at \href{https://github.com/owid/co2-data}{Our World in Data}.
 }
 \keyword{datasets}
