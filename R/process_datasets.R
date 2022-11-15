@@ -1,15 +1,19 @@
-#' World Health Organization TB data
+#' CO2 and Greenhouse Gas Emissions in North America (1940-2020)
 #'
-#' A subset of data from the World Health Organization Global Tuberculosis
-#' Report ...
+#' A subset of CO2 and Greenhouse Gas (GHG) Emissions data filtered by countries in North America. The original data was acquired and maintained by [Our World in Data](https://github.com/owid/co2-data)
 #'
 #' @format ## `owid_ghg`
-#' A data frame with 7,240 rows and 60 columns:
+#' A data frame with 1,827 rows and 7 columns:
 #' \describe{
-#'   \item{country}{Country name}
-#'   \item{iso2, iso3}{2 & 3 letter ISO country codes}
-#'   \item{year}{Year}
+#'   \item{year}{Years of observation since World War 2, from 1940-2020}
+#'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
+#'   \item{population}{Population of each country or region}
+#'   \item{gdp}{Gross domestic product (GDP) represents value added by a country's production of goods and services: measured accounting for inflation and price differences between countries; multiplied GDP per capita with population }
+#'   \item{total_ghg}{Total greenhouse gas emissions, measured in million tonnes of carbon dioxide-equivalents (CO2 metric comparing the emissions from various greenhouse gases on the basis of their global-warming potential.}
+#'   \item{coal_co2}{?Annual emissions of carbon dioxide (CO2) from coal, measured in million tonnes}
+#'   \item{methane}{Total methane emissions, measured in million tonnes of carbon dioxide-equivalents.}
 #'   ...
 #' }
-#' @source <https://www.who.int/teams/global-tuberculosis-programme/data>
+#' @source <https://github.com/owid/co2-data>
 "owid_ghg"
+
