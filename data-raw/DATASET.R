@@ -1,7 +1,6 @@
 ## code to prepare `DATASET` dataset goes here
 
 library(tidyverse)
-library(dplyr)
 owid_ghg <- read_csv("data-raw/owid-co2-data.csv")
 
 owid_ghg <- owid_ghg %>%
