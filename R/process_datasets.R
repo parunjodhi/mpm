@@ -1,6 +1,6 @@
 #' CO2 and Greenhouse Gas Emissions in North America (1940-2020)
 #'
-#' A subset of CO2 and Greenhouse Gas (GHG) Emissions data filtered by countries in North America. The original data was acquired and maintained by [Our World in Data](https://github.com/owid/co2-data)
+#' A subset of CO2 and Greenhouse Gas (GHG) Emissions data filtered by countries in North America. The original data was acquired, aggregated and maintained by Hannah Ritchie, Max Roser, Edouard Mathieu, Bobbie Macdonald and Pablo Rosado at [Our World in Data](https://github.com/owid/co2-data).
 #'
 #' @format ## `owid_ghg`
 #' A data frame with 1,827 rows and 7 columns:
