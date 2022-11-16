@@ -16,4 +16,3 @@
 #' }
 #' @source <https://github.com/owid/co2-data>
 "owid_ghg"
-
