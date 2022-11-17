@@ -20,37 +20,22 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/mpm)](https://CRAN.R-project.org/package=mpm)
 <!-- badges: end -->
 
-The goal of mpm is to ...
+## Purpose 
+
+The goal of this package is to provide a centralized place to clearly visualize the effects of climate change based on key demographics by country. `mpm` is a package that contains data about various greenhouse gas (GHG) emissions by country based on GDP and population.
+
+## Target audience
+
+This package would find excellent use by governmental agencies to determine how their GHG emissions are affecting their communities. 
 
 ## Installation
 
 You can install the development version of mpm like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("parunjodhi/mpm")
 ```
 
-## Example
+## Plan for Phase III
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(mpm)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+In Phase III, we plan to expand this package to include a function that has the ability to plot how GHG emissions affect health issues (asthma, chronic diseases, air quality) in a given community based on the variables we have currently included.
