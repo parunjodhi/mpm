@@ -12,10 +12,10 @@ all_demographics(nation = "United States", ...)
 \item{...}{Other variables include min_year and max_year}
 }
 \value{
-3 side-by-side ggplots showing the relationships described above
+3 ggplots showing the relationships described above
 }
 \description{
-This function plots 3 side-by-side plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
+This function plots 3 plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
 }
 \examples{
 all_demographics()

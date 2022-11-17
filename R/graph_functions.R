@@ -124,12 +124,12 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 
 #' Population, GDP, Total Greehouse Gas Emissions(GHG) over the years for a specific country
 #'
-#' This function plots 3 side-by-side plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
+#' This function plots 3 plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
 #'
 #' @param nation Name of country (default: United States)
 #' @param ... Other variables include min_year and max_year
 #'
-#' @return 3 side-by-side ggplots showing the relationships described above
+#' @return 3 ggplots showing the relationships described above
 #' @export
 #'
 #' @examples
