@@ -8,6 +8,8 @@ all_demographics(nation = "United States", ...)
 }
 \arguments{
 \item{nation}{Name of country (default: United States)}
+
+\item{...}{Other variables include min_year and max_year}
 }
 \value{
 3 side-by-side ggplots showing the relationships described above

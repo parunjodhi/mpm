@@ -22,4 +22,5 @@ LazyData: true
 Imports:
   ggplot2,
   dplyr,
-  ggpubr
+  ggpubr,
+  scales
