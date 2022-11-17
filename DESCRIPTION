@@ -21,4 +21,5 @@ Depends:
 LazyData: true
 Imports:
   ggplot2,
-  dplyr
+  dplyr,
+  ggpubr
