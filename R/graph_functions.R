@@ -65,7 +65,7 @@ gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
     select(year, country, gdp)
 
   if(sum(is.na(gdp_data)) == nrow(gdp_data)) {
-    warning(paste("No GDP data avaliable for ", nation, ":\n", min_year, "-", max_year))
+    warning(paste("No GDP data avaliable for ", nation, ":", min_year, "-", max_year))
   }
 
   gdp_p <- ggplot(gdp_data, aes(x = year, y = gdp)) +
@@ -74,7 +74,7 @@ gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
     labs(
       x = "",
       y = "GDP",
-      title = paste("GDP for ", nation, ":", min_year, "-", max_year)
+      title = paste("GDP for ", nation, ":\n", min_year, "-", max_year)
     )
 
   return(gdp_p)
