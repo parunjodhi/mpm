@@ -2,7 +2,7 @@
 % Please edit documentation in R/graph_functions.R
 \name{population_plot}
 \alias{population_plot}
-\title{Population for a specifc country over the years}
+\title{Population for a specific country over the years}
 \usage{
 population_plot(nation = "United States", min_year = 1940, max_year = 2020)
 }
@@ -14,12 +14,12 @@ population_plot(nation = "United States", min_year = 1940, max_year = 2020)
 \item{max_year}{End of time period (default: 2020 - also maximum year in dataset)}
 }
 \value{
-A ggplot looking at population vs years for nation specified between time period specified
+A ggplot looking at population vs years for nation specified between time period specified.
 }
 \description{
-This functions plots the trend in population for a specific country (default: USA) over a period of time (default: 1940-2020)
+This function plots the trend in population for a specific country (default: USA) over a period of time (default: 1940-2020)
 }
 \examples{
 population_plot()
-population_plot("El Salvador", 1980)
+population_plot("El Salvador", max_year = 2010)
 }
