@@ -31,6 +31,70 @@ You can install the development version of mpm like so:
 devtools::install_github("parunjodhi/mpm")
 ```
 
+## Datasets Included
+
+- `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
+  Emissions filtered for countries in North America.
+
+## Functions Included
+
+- `population_plot`
+- `gdp_plot`
+- `ghg_plot`
+- `all_demographics`
+
+## Basic Usage
+
+These are a few examples of how to use the package and its functions to
+wrangle and visualize data related to demographics and emissions in
+countries in North America.
+
+Load `mpm` R package
+
+``` r
+library(mpm)
+```
+
+### Data Visualization functions
+
+1.  Visualize the trend in population for Guatemala from 1980 to 2000
+
+``` r
+population_plot("Guatemala", 1980, 2000)
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+
+2.  Visualize the trend in GDP for Canada from 1940 to 2020
+
+``` r
+gdp_plot("Canada")
+#> Warning: Removed 2 row(s) containing missing values (geom_path).
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+3.  Visualize the trend in total GHG emissions for the United States
+    from 1940 to 2020
+
+``` r
+ghg_plot()
+#> Warning: Removed 51 row(s) containing missing values (geom_path).
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+4.  Visualize the trends in population, GDP and total GHG emissions for
+    Jamaica from 2000 to 2020
+
+``` r
+all_demographics("Jamaica", min_year = 2000)
+#> Warning: Removed 2 row(s) containing missing values (geom_path).
+#> Warning: Removed 1 row(s) containing missing values (geom_path).
+```
+
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+
 ## Plan for Phase III
 
 In Phase III, we plan to expand this package to include a function that

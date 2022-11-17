@@ -24,7 +24,7 @@ population_plot <- function(nation = "United States", min_year = 1940, max_year 
     select(year, country, population)
 
   if(sum(is.na(pop_data)) == nrow(pop_data)) {
-    warning(paste("No data avaliable for ", nation, ":", min_year, "-", max_year))
+    warning(paste("No population data avaliable for ", nation, ":", min_year, "-", max_year))
   }
 
   pop_p <- ggplot(pop_data, aes(x = year, y = population)) +
@@ -33,7 +33,7 @@ population_plot <- function(nation = "United States", min_year = 1940, max_year 
     labs(
       x = "",
       y = "Population",
-      title = paste("Population for ", nation, ":", min_year, "-", max_year)
+      title = paste("Population for ", nation, ":\n", min_year, "-", max_year)
     )
 
   return(pop_p)
@@ -65,7 +65,7 @@ gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
     select(year, country, gdp)
 
   if(sum(is.na(gdp_data)) == nrow(gdp_data)) {
-    warning(paste("No data avaliable for ", nation, ":", min_year, "-", max_year))
+    warning(paste("No GDP data avaliable for ", nation, ":\n", min_year, "-", max_year))
   }
 
   gdp_p <- ggplot(gdp_data, aes(x = year, y = gdp)) +
@@ -106,7 +106,7 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
       select(year, country, total_ghg)
 
     if(sum(is.na(ghg_data)) == nrow(ghg_data)) {
-      warning(paste("No data avaliable for ", nation, ":", min_year, "-", max_year))
+      warning(paste("No GHG emissions data avaliable for ", nation, ":", min_year, "-", max_year))
     }
 
     ghg_p <- ggplot(ghg_data, aes(x = year, y = total_ghg)) +
