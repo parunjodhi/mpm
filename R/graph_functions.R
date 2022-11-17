@@ -14,6 +14,7 @@
 #' population_plot("El Salvador", max_year = 2010)
 #' @import ggplot2
 #' @import dplyr
+#' @import scales
 population_plot <- function(nation = "United States", min_year = 1940, max_year = 2020) {
 
   pop_data <- owid_ghg %>%
@@ -28,7 +29,7 @@ population_plot <- function(nation = "United States", min_year = 1940, max_year 
 
   pop_p <- ggplot(pop_data, aes(x = year, y = population)) +
     geom_line(colour = "#39B778") +
-    scale_y_continuous(labels = scales::comma) +
+    scale_y_continuous(labels = comma) +
     labs(
       x = "",
       y = "Population",
@@ -54,6 +55,7 @@ population_plot <- function(nation = "United States", min_year = 1940, max_year 
 #' gdp_plot("Bahamas", min_year = 1980)
 #' @import ggplot2
 #' @import dplyr
+#' @import scales
 gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020) {
 
   gdp_data <- owid_ghg %>%
@@ -68,7 +70,7 @@ gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 
   gdp_p <- ggplot(gdp_data, aes(x = year, y = gdp)) +
     geom_line(colour = "#753F8E") +
-    scale_y_continuous(labels = scales::dollar) +
+    scale_y_continuous(labels = dollar) +
     labs(
       x = "",
       y = "GDP",
@@ -94,6 +96,7 @@ gdp_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 #' ghg_plot("Canada")
 #' @import ggplot2
 #' @import dplyr
+#' @import scales
 ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020) {
 
     ghg_data <- owid_ghg %>%
@@ -108,7 +111,7 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 
     ghg_p <- ggplot(ghg_data, aes(x = year, y = total_ghg)) +
       geom_line(colour = "#F90703") +
-      scale_y_continuous(labels = scales::comma) +
+      scale_y_continuous(labels = comma) +
       labs(
         x = "",
         y = "Total Greenhouse Gas \nEmissions/ million tonnes",
@@ -124,6 +127,7 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 #' This function plots 3 side-by-side plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
 #'
 #' @param nation Name of country (default: United States)
+#' @param ... Other variables include min_year and max_year
 #'
 #' @return 3 side-by-side ggplots showing the relationships described above
 #' @export
@@ -134,6 +138,7 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 #' @import ggplot2
 #' @import dplyr
 #' @import ggpubr
+#' @import scales
 all_demographics <- function(nation = "United States", ...) {
 
 
