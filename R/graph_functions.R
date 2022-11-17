@@ -111,10 +111,40 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
       scale_y_continuous(labels = scales::comma) +
       labs(
         x = "",
-        y = "Total Greenhouse Gas Emissions\n/ million tonnes",
-        title = paste("Total Greenhouse Gas Emissions for ", nation, ":\n", min_year, "-", max_year)
+        y = "Total Greenhouse Gas \nEmissions/ million tonnes",
+        title = paste("Total Greenhouse Gas Emissions for\n", nation, ":", min_year, "-", max_year)
       )
 
     return(ghg_p)
+}
+
+
+#' Population, GDP, Total Greehouse Gas Emissions(GHG) over the years for a specific country
+#'
+#' This function plots 3 side-by-side plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
+#'
+#' @param nation Name of country (default: United States)
+#'
+#' @return 3 side-by-side ggplots showing the relationships described above
+#' @export
+#'
+#' @examples
+#' all_demographics()
+#' all_demographics("Mexico", min_year = 2000)
+#' @import ggplot2
+#' @import dplyr
+#' @import ggpubr
+all_demographics <- function(nation = "United States", ...) {
+
+
+  pop_graph <- population_plot(nation, ...)
+
+  gdp_graph <- gdp_plot(nation, ...)
+
+  ghg_graph <- ghg_plot(nation,...)
+
+
+  ggarrange(pop_graph, gdp_graph, ghg_graph, ncol = 2, nrow = 2)
+
 }
 
