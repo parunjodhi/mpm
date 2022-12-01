@@ -2,13 +2,22 @@
 % Please edit documentation in R/owid_functions.R
 \name{population_predict}
 \alias{population_predict}
-\title{Title}
+\title{Predict the population for a specific for a specific year}
 \usage{
 population_predict(pred_yr, nation = "United States")
 }
 \arguments{
-\item{pred_yr}{}
+\item{pred_yr}{Year for predicted value}
+
+\item{nation}{Name of country (default: United States)}
+}
+\value{
+A printed message stating the predicted value for the year and nation specified
 }
 \description{
-Title
+Predict the population for a specific for a specific year
+}
+\examples{
+population_predict(2030)
+population_predict(2025, "Jamaica")
 }

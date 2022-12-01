@@ -156,19 +156,25 @@ all_demographics <- function(nation = "United States", ...) {
 
 }
 
-#' Title
+#' Predict the population for a specific for a specific year
 #'
-#' @param nation
-#' @param pred_yr
+#' @param pred_yr Year for predicted value
+#' @param nation Name of country (default: United States)
 #'
-#' @return
+#' @return A printed message stating the predicted value for the year and nation specified
 #' @export
 #'
 #' @examples
+#' population_predict(2030)
+#' population_predict(2025, "Jamaica")
+#' @import dplyr
 population_predict <- function(pred_yr, nation = "United States") {
   new_data <- owid_ghg %>%
     filter(country == nation)
   model <- lm(population ~ year, data = new_data)
   pred_value <- predict(model, data.frame(year = pred_yr))
-  paste0("The population predicted for the year ", pred_yr, " is", pred_value, " people.")
+
+  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes."))
+
+  paste0("The population predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " people.")
 }
