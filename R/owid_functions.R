@@ -165,10 +165,10 @@ all_demographics <- function(nation = "United States", ...) {
 #' @export
 #'
 #' @examples
-population_predict <- function(nation = "United States", pred_yr) {
+population_predict <- function(pred_yr, nation = "United States") {
   new_data <- owid_ghg %>%
     filter(country == nation)
   model <- lm(population ~ year, data = new_data)
   pred_value <- predict(model, data.frame(year = pred_yr))
-  return(pred_value)
+  paste0("The population predicted for the year ", pred_yr, " is", pred_value, " people.")
 }
