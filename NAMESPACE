@@ -2,6 +2,7 @@
 
 export(all_demographics)
 export(gdp_plot)
+export(gdp_predict)
 export(ghg_plot)
 export(population_plot)
 export(population_predict)

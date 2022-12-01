@@ -207,6 +207,7 @@ gdp_predict <- function(pred_yr, nation = "United States") {
   if(sum(is.na(new_data)) == nrow(new_data)) {
     stop(paste("No GDP data avaliable for ", nation))
   }
+
   model <- lm(gdp ~ year, data = new_data)
   pred_value <- predict(model, data.frame(year = pred_yr))
 
@@ -214,3 +215,34 @@ gdp_predict <- function(pred_yr, nation = "United States") {
 
   paste0("The GDP predicted for ", nation, " for the year ", pred_yr, " is US$", pred_value, ".")
 }
+
+#' Predict the Total Greenhouse Gas Emissions in million tonnes for a specific country for a specific year
+#'
+#' @param pred_yr Year for predicted value
+#' @param nation Name of country (default: United States)
+#'
+#' @return A printed message stating the predicted value for the year and nation specified
+#' @export
+#'
+#' @examples
+#' ghg_predict(2033)
+#' ghg_predict(2024, "Belize")
+#' @import dplyr
+ghg_predict <- function(pred_yr, nation = "United States") {
+
+  new_data <- owid_ghg %>%
+    filter(country == nation)%>%
+    select(year, country, total_ghg)
+
+  if(sum(is.na(new_data)) == nrow(new_data)) {
+    stop(paste("No GDP data avaliable for ", nation))
+  }
+
+  model <- lm(total_ghg ~ year, data = new_data)
+  pred_value <- predict(model, data.frame(year = pred_yr))
+
+  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes only."))
+
+  paste0("The Total GreenHouse Gas Emissions predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " million tonnes.")
+}
+
