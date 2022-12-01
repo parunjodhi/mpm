@@ -16,3 +16,23 @@
 #' }
 #' @source <https://github.com/owid/co2-data>
 "owid_ghg"
+#'
+#'
+#'
+#'
+#' Air Pollution Data Measured in Disability-Adjusted Life Years (DALYs) (1990-2019)
+#'
+#' A subset of Air Pollution data filtered by countries in North America. DALYs is a metric used to assess disease burden. Data originally aggregated and maintained by Hannah Ritchie and Max Roser at [Our World in Data](https://ourworldindata.org/air-pollution).
+#'
+#' @format ## `air_data`
+#' A data frame with 720 rows and 5 columns:
+#' \describe{
+#'   \item{country_air}{Lists the 23 countries in North America plus North America (totaling everything)}
+#'   \item{year}{Years of observation from 1990-2019}
+#'   \item{air_pollution}{total DALYs resulted from total air pollution: indoor and outdoor}
+#'   \item{household_pollution}{total DALYs resulted from indoor air pollution}
+#'   \item{outdoor_pollution}{total DALYs resulted from outdoor air pollution}
+#'   ...
+#' }
+#' @source <https://ourworldindata.org/air-pollution>
+"air_data"

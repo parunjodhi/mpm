@@ -5,8 +5,6 @@
 \title{Predict the GDP in current US$ for a specific country for a specific year}
 \usage{
 gdp_predict(pred_yr, nation = "United States")
-
-gdp_predict(pred_yr, nation = "United States")
 }
 \arguments{
 \item{pred_yr}{Year for predicted value}
@@ -15,17 +13,11 @@ gdp_predict(pred_yr, nation = "United States")
 }
 \value{
 A printed message stating the predicted value for the year and nation specified
-
-A printed message stating the predicted value for the year and nation specified
 }
 \description{
 Predict the GDP in current US$ for a specific country for a specific year
-
-Predict the Total Greenhouse Gas Emissions in million tonnes for a specific country for a specific year
 }
 \examples{
 gdp_predict(2025)
 gdp_predict(2041, "Barbados")
-gdp_predict(2033)
-gdp_predict(2024, "Belize")
 }
