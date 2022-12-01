@@ -156,3 +156,19 @@ all_demographics <- function(nation = "United States", ...) {
 
 }
 
+#' Title
+#'
+#' @param nation
+#' @param pred_yr
+#'
+#' @return
+#' @export
+#'
+#' @examples
+population_predict <- function(nation = "United States", pred_yr) {
+  new_data <- owid_ghg %>%
+    filter(country == nation)
+  model <- lm(population ~ year, data = new_data)
+  pred_value <- predict(model, data.frame(year = pred_yr))
+  return(pred_value)
+}
