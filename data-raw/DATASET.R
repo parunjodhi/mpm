@@ -19,7 +19,7 @@ owid_ghg <- owid_ghg %>%
 usethis::use_data(owid_ghg, overwrite = TRUE)
 
 library(janitor)
-pollution_data <- read_csv("data-raw/disease-burden-by-risk-factor.csv") %>%
+air_data <- read_csv("data-raw/disease-burden-by-risk-factor.csv") %>%
   clean_names() %>%
   rename(air_pollution = dal_ys_disability_adjusted_life_years_cause_all_causes_risk_air_pollution_sex_both_age_all_ages_number,
          household_pollution = dal_ys_disability_adjusted_life_years_cause_all_causes_risk_household_air_pollution_from_solid_fuels_sex_both_age_all_ages_number,
@@ -36,6 +36,6 @@ pollution_data <- read_csv("data-raw/disease-burden-by-risk-factor.csv") %>%
            country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
            country == "North America")
 
-usethis::use_data(pollution_data, overwrite = TRUE)
+usethis::use_data(air_data, overwrite = TRUE)
 
 
