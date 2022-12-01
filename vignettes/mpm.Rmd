@@ -1,0 +1,21 @@
+---
+title: "mpm"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mpm}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mpm)
+```
+
+This is our vignette.
