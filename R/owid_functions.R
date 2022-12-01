@@ -156,7 +156,7 @@ all_demographics <- function(nation = "United States", ...) {
 
 }
 
-#' Predict the population for a specific for a specific year
+#' Predict the population for a specific country for a specific year
 #'
 #' @param pred_yr Year for predicted value
 #' @param nation Name of country (default: United States)
@@ -169,12 +169,48 @@ all_demographics <- function(nation = "United States", ...) {
 #' population_predict(2025, "Jamaica")
 #' @import dplyr
 population_predict <- function(pred_yr, nation = "United States") {
+
   new_data <- owid_ghg %>%
-    filter(country == nation)
+    filter(country == nation) %>%
+    select(year, country, population)
+
+  if(sum(is.na(new_data)) == nrow(new_data)) {
+    stop(paste("No population data avaliable for ", nation))
+  }
+
   model <- lm(population ~ year, data = new_data)
   pred_value <- predict(model, data.frame(year = pred_yr))
 
-  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes."))
+  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes only."))
 
   paste0("The population predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " people.")
+}
+
+#' Predict the GDP in current US$ for a specific country for a specific year
+#'
+#' @param pred_yr Year for predicted value
+#' @param nation Name of country (default: United States)
+#'
+#' @return A printed message stating the predicted value for the year and nation specified
+#' @export
+#'
+#' @examples
+#' gdp_predict(2025)
+#' gdp_predict(2041, "Barbados")
+#' @import dplyr
+gdp_predict <- function(pred_yr, nation = "United States") {
+
+  new_data <- owid_ghg %>%
+    filter(country == nation)%>%
+    select(year, country, gdp)
+
+  if(sum(is.na(new_data)) == nrow(new_data)) {
+    stop(paste("No GDP data avaliable for ", nation))
+  }
+  model <- lm(gdp ~ year, data = new_data)
+  pred_value <- predict(model, data.frame(year = pred_yr))
+
+  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes only."))
+
+  paste0("The GDP predicted for ", nation, " for the year ", pred_yr, " is US$", pred_value, ".")
 }
