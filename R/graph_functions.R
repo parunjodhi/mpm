@@ -1,3 +1,6 @@
+globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population"))
+
+
 #' Population for a specific country over the years
 #'
 #' This function plots the trend in population for a specific country (default: USA) over a period of time (default: 1940-2020)
