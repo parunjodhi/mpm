@@ -17,3 +17,22 @@ owid_ghg <- owid_ghg %>%
   filter(!(year <= "1939"))
 
 usethis::use_data(owid_ghg, overwrite = TRUE)
+
+# Importing 'regional_grouping'
+library(dplyr)
+regional_grouping <- read_csv("data-raw/Metadata_Country_API_VC.IDP.NWDS_.csv")
+
+regional_grouping <- regional_grouping %>%
+  select(TableName, Region, IncomeGroup) %>%
+  rename(Country = TableName, Income_Group = IncomeGroup) %>%
+  filter(Country == "United States" | Country == "Mexico" | Country == "Canada" |
+           Country == "Bermuda" | Country == "Guatemala" | Country == "Cuba" | Country == "Haiti" |
+           Country == "Dominican Republic" | Country == "Honduras" | Country == "Nicaragua" |
+           Country == "El Salvador" | Country =="Costa Rica" | Country == "Panama" | Country == "Jamaica" |
+           Country == "Trinidad and Tobago" | Country == "Belize" | Country == "Bahamas" |
+           Country == "Barbados" | Country == "St. Lucia" | Country == "Grenada" |
+           Country == "St. Vincent and the Grenadines" |
+           Country == "Antigua and Barbuda" | Country == "Dominica" | Country == "St. Kitts and Nevis" |
+           Country == "North America")
+
+
