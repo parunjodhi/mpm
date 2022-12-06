@@ -260,10 +260,10 @@ all_data_country <- function(nation) {
     filter(country == nation)
 
   air_pol_data <- air_data %>%
-    filter(country_air == nation)
+    filter(country == nation)
 
   all_data <- owid_data %>%
-    full_join(air_pol_data, by = c("country" = "country_air")) %>%
+    full_join(air_pol_data, by = "country") %>%
     select(-year.y) %>%
     mutate(year = year.x) %>%
     select(-year.x)
