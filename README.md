@@ -9,6 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/mpm)](https://CRAN.R-project.org/package=mpm)
+[![R-CMD-check](https://github.com/parunjodhi/mpm/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/parunjodhi/mpm/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Purpose
@@ -33,15 +34,15 @@ devtools::install_github("parunjodhi/mpm")
 
 ## Datasets Included
 
-- `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
-  Emissions filtered for countries in North America.
+-   `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
+    Emissions filtered for countries in North America.
 
 ## Functions Included
 
-- `population_plot`
-- `gdp_plot`
-- `ghg_plot`
-- `all_demographics`
+-   `population_plot`
+-   `gdp_plot`
+-   `ghg_plot`
+-   `all_demographics`
 
 ## Basic Usage
 
@@ -69,7 +70,7 @@ population_plot("Guatemala", 1980, 2000)
 
 ``` r
 gdp_plot("Canada")
-#> Warning: Removed 2 row(s) containing missing values (geom_path).
+#> Warning: Removed 2 rows containing missing values (`geom_line()`).
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
@@ -79,7 +80,7 @@ gdp_plot("Canada")
 
 ``` r
 ghg_plot()
-#> Warning: Removed 51 row(s) containing missing values (geom_path).
+#> Warning: Removed 51 rows containing missing values (`geom_line()`).
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
@@ -89,8 +90,8 @@ ghg_plot()
 
 ``` r
 all_demographics("Jamaica", min_year = 2000)
-#> Warning: Removed 2 row(s) containing missing values (geom_path).
-#> Warning: Removed 1 row(s) containing missing values (geom_path).
+#> Warning: Removed 2 rows containing missing values (`geom_line()`).
+#> Warning: Removed 1 row containing missing values (`geom_line()`).
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
