@@ -269,7 +269,8 @@ all_data_country <- function(nation) {
     full_join(air_pol_data, by = "country") %>%
     select(-year.y) %>%
     mutate(year = year.x) %>%
-    select(-year.x)
+    select(-year.x) %>%
+    select(year, everything())
 
   return(all_data)
 }
