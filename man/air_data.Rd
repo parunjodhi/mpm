@@ -9,7 +9,7 @@
 
 A data frame with 720 rows and 5 columns:
 \describe{
-\item{country_air}{Lists the 23 countries in North America plus North America (totaling everything)}
+\item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
 \item{year}{Years of observation from 1990-2019}
 \item{air_pollution}{total DALYs resulted from total air pollution: indoor and outdoor}
 \item{household_pollution}{total DALYs resulted from indoor air pollution}
