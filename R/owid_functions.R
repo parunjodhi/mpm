@@ -1,4 +1,4 @@
-globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population"))
+globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population", "lm", "predict"))
 
 
 #' Population for a specific country over the years
@@ -130,7 +130,8 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 #' This function plots 3 plots respectively showing (1) Population vs years (2) GDP(in current US$) vs years (3) Total GHG(million tonnes) vs years for a spcific country
 #'
 #' @param nation Name of country (default: United States)
-#' @param ... Other variables include min_year and max_year
+#' @param min_year Start of time period (default: 1940 - also minimum year in dataset)
+#' @param max_year End of time period (default: 2020 - also maximum year in dataset)
 #'
 #' @return 3 ggplots showing the relationships described above
 #' @export
@@ -142,14 +143,14 @@ ghg_plot <- function(nation = "United States", min_year = 1940, max_year = 2020)
 #' @import dplyr
 #' @import ggpubr
 #' @import scales
-all_demographics <- function(nation = "United States", ...) {
+all_demographics <- function(nation = "United States", min_year = 1940, max_year = 2020) {
 
 
-  pop_graph <- population_plot(nation, ...)
+  pop_graph <- population_plot(nation, min_year, max_year)
 
-  gdp_graph <- gdp_plot(nation, ...)
+  gdp_graph <- gdp_plot(nation, min_year, max_year)
 
-  ghg_graph <- ghg_plot(nation,...)
+  ghg_graph <- ghg_plot(nation, min_year, max_year)
 
 
   ggarrange(pop_graph, gdp_graph, ghg_graph, ncol = 2, nrow = 2)

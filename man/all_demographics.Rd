@@ -4,12 +4,14 @@
 \alias{all_demographics}
 \title{Population, GDP, Total Greehouse Gas Emissions(GHG) over the years for a specific country}
 \usage{
-all_demographics(nation = "United States", ...)
+all_demographics(nation = "United States", min_year = 1940, max_year = 2020)
 }
 \arguments{
 \item{nation}{Name of country (default: United States)}
 
-\item{...}{Other variables include min_year and max_year}
+\item{min_year}{Start of time period (default: 1940 - also minimum year in dataset)}
+
+\item{max_year}{End of time period (default: 2020 - also maximum year in dataset)}
 }
 \value{
 3 ggplots showing the relationships described above
