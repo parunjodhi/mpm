@@ -2,13 +2,20 @@
 % Please edit documentation in R/owid_functions.R
 \name{all_data_country}
 \alias{all_data_country}
-\title{Title}
+\title{Gather data from all data sets in package for a specific country}
 \usage{
 all_data_country(nation)
 }
 \arguments{
-\item{nation}{}
+\item{nation}{Name of country}
+}
+\value{
+data frame consisting of all data from all data sets in package for a specific country
 }
 \description{
-Title
+Gather data from all data sets in package for a specific country
+}
+\examples{
+all_data_country("El Salvador")
+all_data_country("Canada")
 }

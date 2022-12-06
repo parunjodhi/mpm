@@ -1,4 +1,4 @@
-globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population", "lm", "predict", "owid_data", "air_pol_data", "all_data"))
+globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population", "lm", "predict", "owid_data", "air_pol_data", "all_data", "air_data", "year.y", "year.x"))
 
 
 #' Population for a specific country over the years
@@ -247,14 +247,17 @@ ghg_predict <- function(pred_yr, nation = "United States") {
   paste0("The Total GreenHouse Gas Emissions predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " million tonnes.")
 }
 
-#' Title
+#' Gather data from all data sets in package for a specific country
 #'
-#' @param nation
+#' @param nation Name of country
 #'
-#' @return
+#' @return data frame consisting of all data from all data sets in package for a specific country
 #' @export
 #'
 #' @examples
+#' all_data_country("El Salvador")
+#' all_data_country("Canada")
+#' @import dplyr
 all_data_country <- function(nation) {
   owid_data <- owid_ghg %>%
     filter(country == nation)
