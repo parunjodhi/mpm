@@ -2,6 +2,7 @@
 
 export(all_data_country)
 export(all_demographics)
+export(dalys_predict)
 export(gdp_plot)
 export(gdp_predict)
 export(ghg_plot)
