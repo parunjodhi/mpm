@@ -44,3 +44,25 @@ air_data <- air_data %>%
 usethis::use_data(air_data, overwrite = TRUE)
 
 
+library(dplyr)
+regional_grouping <- read_csv("data-raw/WB_Metadata_Country_API_regions.csv")
+regional_grouping$TableName[regional_grouping$TableName=="St. Lucia"]<-"Saint Lucia"
+regional_grouping$TableName[regional_grouping$TableName=="St. Vincent and the Grenadines"]<-"Saint Vincent and the Grenadines"
+regional_grouping$TableName[regional_grouping$TableName=="St. Kitts and Nevis"]<-"Saint Kitts and Nevis"
+
+regional_grouping <- regional_grouping %>%
+  select(TableName, Region, IncomeGroup) %>%
+  rename(country = TableName, Income_Group = IncomeGroup) %>%
+  filter(country == "United States" | country == "Mexico" | country == "Canada" |
+           country == "Bermuda" | country == "Guatemala" | country == "Cuba" | country == "Haiti" |
+           country == "Dominican Republic" | country == "Honduras" | country == "Nicaragua" |
+           country == "El Salvador" | country =="Costa Rica" | country == "Panama" | country == "Jamaica" |
+           country == "Trinidad and Tobago" | country == "Belize" | country == "Bahamas" |
+           country == "Barbados" | country == "Saint Lucia" | country == "Grenada" |
+           country == "Saint Vincent and the Grenadines" |
+           country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
+           country == "North America")
+
+usethis::use_data(regional_grouping, overwrite = TRUE)
+
+#displaced_by_disaster <- read_csv("data-raw/WB_Country_API_displacement.csv")
