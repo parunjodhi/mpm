@@ -10,12 +10,14 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
 )
 ```
 
-```{r setup}
+```{r setup, warning = FALSE, message = FALSE}
 library(mpm)
+library(tidyverse)
+library(ggplot2)
 ```
 
 This is our vignette.
