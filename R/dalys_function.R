@@ -27,11 +27,14 @@ dalys_predict <- function(pred_year, nation = "United States"){
     stop(paste("No GDP data avaliable for ", nation))
   }
 
-  dalys_model <- lm(air_pollution ~ total_ghg, data = all_data)
+  dalys_model_air <- lm(air_pollution ~ year, data = all_data)
+  ghg_model <- lm(total_ghg ~ year, data = all_data)
 
-  pred_value <- predict(dalys_model, data.frame(year = pred_year))
-  return(pred_value)
 
-  paste0("The Total DALYs predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " .")
+  pred_value_air <- predict(dalys_model_air, data.frame(year = pred_year))
+  pred_value_ghg <- predict(ghg_model, data.frame(year = pred_year))
+
+
+  paste0("The Total DALYs predicted for ", nation, " for the year ", pred_year, " is ", pred_value_air, " and the total predicted ghg is ", pred_value_ghg, ".")
 
 }

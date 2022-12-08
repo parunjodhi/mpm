@@ -10,6 +10,8 @@ gdp_predict(pred_yr, nation = "United States")
 \item{pred_yr}{Year for predicted value}
 
 \item{nation}{Name of country (default: United States)}
+
+\item{`min_year`}{something}
 }
 \value{
 A printed message stating the predicted value for the year and nation specified
