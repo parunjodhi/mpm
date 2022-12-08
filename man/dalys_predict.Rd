@@ -7,8 +7,17 @@
 dalys_predict(pred_year, nation = "United States")
 }
 \arguments{
-\item{nation}{}
+\item{pred_year}{Year for the predicted values}
+
+\item{nation}{Name of country (default: United States)}
+}
+\value{
+A printed message stating the predicted value for the year and nation specified
 }
 \description{
 Predict Disability Adjusted Life Years and Total Greenhouse Gas emissions in million tonnes for a specific country in a future year
+}
+\examples{
+dalys_predict(2040)
+dalys_predict(2030, "Mexico")
 }

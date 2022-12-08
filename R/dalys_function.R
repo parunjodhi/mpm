@@ -1,13 +1,16 @@
 
 #' Predict Disability Adjusted Life Years and Total Greenhouse Gas emissions in million tonnes for a specific country in a future year
 #'
-#' @param pred_year
-#' @param nation
+#' @param pred_year Year for the predicted values
+#' @param nation Name of country (default: United States)
 #'
-#' @return
+#' @return A printed message stating the predicted value for the year and nation specified
 #' @export
 #'
 #' @examples
+#' dalys_predict(2040)
+#' dalys_predict(2030, "Mexico")
+
 #' @import dplyr
 dalys_predict <- function(pred_year, nation = "United States"){
 
@@ -24,7 +27,7 @@ dalys_predict <- function(pred_year, nation = "United States"){
     select(-year.x)
 
   if(sum(is.na(all_data)) == nrow(all_data)) {
-    stop(paste("No GDP data avaliable for ", nation))
+    stop(paste("Data missing for ", nation))
   }
 
   dalys_model_air <- lm(air_pollution ~ year, data = all_data)
@@ -37,13 +40,14 @@ dalys_predict <- function(pred_year, nation = "United States"){
   pred_value_ghg <- round(predict(ghg_model, data.frame(year = pred_year)), digits = 3)
   pred_value_pop <- round(predict(pop_model, data.frame(year = pred_year)), digits = 3)
 
-  dalys_per_person <- pred_value_air/pred_value_pop
+  dalys_per_person <- round(pred_value_air/pred_value_pop, digits = 6)
 
-  warning(paste("This prediction is based off of a linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes only."))
+  warning(paste("This prediction is based off of a generalized linear regression model, even if the data might not follow a linear pattern over the years. This is for estimation purposes only."))
 
   paste0("The Total DALYs predicted for ", nation, " for the year ", pred_year, " is ",
-         pred_value_air, " total years. Each person will suffer from a loss in ",
-         dalys_per_person, " years. The total predicted ghg is ", pred_value_ghg, " million tonnes.")
+         pred_value_air, " total years. Each person will suffer from an average loss in about ",
+         dalys_per_person, " years due to health issues that arose from air pollution.
+         The total predicted ghg is ", pred_value_ghg, " million tonnes.")
 
 }
 
