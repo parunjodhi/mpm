@@ -2,7 +2,7 @@
 % Please edit documentation in R/dalys_function.R
 \name{dalys_predict}
 \alias{dalys_predict}
-\title{Title}
+\title{Predict Disability Adjusted Life Years and Total Greenhouse Gas emissions in million tonnes for a specific country in a future year}
 \usage{
 dalys_predict(pred_year, nation = "United States")
 }
@@ -10,5 +10,5 @@ dalys_predict(pred_year, nation = "United States")
 \item{nation}{}
 }
 \description{
-Title
+Predict Disability Adjusted Life Years and Total Greenhouse Gas emissions in million tonnes for a specific country in a future year
 }
