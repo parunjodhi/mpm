@@ -1,4 +1,4 @@
-## code to prepare `OWID-CO2-DATA` dataset goes here
+## code for `OWID-CO2-DATA` data set
 
 library(tidyverse)
 owid_ghg <- read_csv("data-raw/owid-co2-data.csv")
@@ -18,6 +18,7 @@ owid_ghg <- owid_ghg %>%
 
 usethis::use_data(owid_ghg, overwrite = TRUE)
 
+## code for `AIR_DATA` data set
 
 library(janitor)
 air_data <- read_csv("data-raw/disease-burden-by-risk-factor.csv")
@@ -43,6 +44,7 @@ air_data <- air_data %>%
 
 usethis::use_data(air_data, overwrite = TRUE)
 
+## code for `REGIONAL_GROUPING` data set
 
 library(dplyr)
 regional_grouping <- read_csv("data-raw/WB_Metadata_Country_API_regions.csv")
@@ -65,4 +67,6 @@ regional_grouping <- regional_grouping %>%
 
 usethis::use_data(regional_grouping, overwrite = TRUE)
 
-#displaced_by_disaster <- read_csv("data-raw/WB_Country_API_displacement.csv")
+## code for `DISPLACED_BY_DISASTER` data set
+
+displaced_by_disaster <- read_csv("data-raw/WB_Country_API_displacement.csv")
