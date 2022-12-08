@@ -28,9 +28,9 @@ dalys_predict <- function(pred_year, nation = "United States"){
   }
 
   dalys_model <- lm(air_pollution ~ total_ghg, data = all_data)
-  return(summary(dalys_model))
 
   pred_value <- predict(dalys_model, data.frame(year = pred_year))
+  return(pred_value)
 
   paste0("The Total DALYs predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " .")
 
