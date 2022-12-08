@@ -11,6 +11,7 @@ globalVariables(c("country", "year", "gdp", "total_ghg", "population", "lm", "pr
 #'
 #' @examples
 #' @import dplyr
+#' @import
 dalys_predict <- function(pred_year, nation = "United States"){
 
   owid_data <- owid_ghg %>%
@@ -29,9 +30,11 @@ dalys_predict <- function(pred_year, nation = "United States"){
     stop(paste("No emissions avaliable for ", nation))
   }
 
-  dalys_model <- glm(year ~ total_ghg+air_pollution, data = all_data)
+  dalys_model <- lm(total_ghg~air_pollution, data = all_data)
+  summary(dalys_model)
 
   pred_value <- predict(dalys_model, data.frame(year = pred_year), type="response")
+  return(pred_value)
 
   paste0("The Total DALYs predicted for ", nation, " for the year ", pred_yr, " is ", pred_value, " .")
 
