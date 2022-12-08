@@ -11,7 +11,6 @@ globalVariables(c("country", "year", "gdp", "total_ghg", "population", "lm", "pr
 #'
 #' @examples
 #' @import dplyr
-#' @import
 dalys_predict <- function(pred_year, nation = "United States"){
 
   owid_data <- owid_ghg %>%
