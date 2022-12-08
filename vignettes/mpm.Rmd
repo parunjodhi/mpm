@@ -16,8 +16,8 @@ knitr::opts_chunk$set(
 
 ```{r setup, warning = FALSE, message = FALSE}
 library(mpm)
-library(tidyverse)
+library(dplyr)
 library(ggplot2)
 ```
 
-This is our vignette.
+The `mpm` dataset contains data
