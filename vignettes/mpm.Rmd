@@ -20,4 +20,12 @@ library(dplyr)
 library(ggplot2)
 ```
 
-The `mpm` dataset contains data
+The `mpm` package contains data on CO2 and Greenhouse Gas (GHG) emissions, pollution (air, household and outdoor pollution) in terms of Disability-Adjusted Life Years (DALYs) and internal displacement within countries.
+
+## The Why?
+
+## Datasets Included
+  - `owid_ghg`: dataset on CO2 and GHG emissions from 1940-2020
+  - `air_data`: dataset on different types of air pollution measured in DALYs from 1990-2019
+
+The `mpm` datasets look only at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, Saint Kitts and Nevis.
