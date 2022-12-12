@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, warning = FALSE, message = FALSE}
+```{r setup, warning = FALSE, message = FALSE, include = FALSE}
 library(mpm)
 library(dplyr)
 library(ggplot2)
@@ -23,9 +23,26 @@ library(ggplot2)
 The `mpm` package contains data on CO2 and Greenhouse Gas (GHG) emissions, pollution (air, household and outdoor pollution) in terms of Disability-Adjusted Life Years (DALYs) and internal displacement within countries.
 
 ## The Why?
+We wanted to create a centralized package that could give users in a quick glance a picture of climate change in any North American country and how it is affecting the people of that country.
+
+## To Who?
+This package would find excellent use by governmental agencies to determine how their GHG emissions are affecting their communities.
 
 ## Datasets Included
   - `owid_ghg`: dataset on CO2 and GHG emissions from 1940-2020
   - `air_data`: dataset on different types of air pollution measured in DALYs from 1990-2019
+  - `regional_grouping`:
 
-The `mpm` datasets look only at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, Saint Kitts and Nevis.
+The `mpm` datasets only look at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, Saint Kitts and Nevis. 
+
+The `owid_ghg` and `air_data` datasets also include the total values of all the countries for each variable in a row value *North America*.
+
+## How can we use this package?
+
+A number of different climate-change related questions can be answered using the tools this package provides us. Some include:
+
+  1. k
+  2. s
+  3. l
+
+
