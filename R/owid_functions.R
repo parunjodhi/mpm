@@ -191,7 +191,6 @@ population_predict <- function(pred_yr, nation = "United States") {
 #'
 #' @param pred_yr Year for predicted value
 #' @param nation Name of country (default: United States)
-#' @param `min_year` something
 #'
 #' @return A printed message stating the predicted value for the year and nation specified
 #' @export
