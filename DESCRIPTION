@@ -1,5 +1,5 @@
 Package: mpm
-Title: What the Package Does (One Line, Title Case)
+Title: Climate-change related data and functions for North America
 Version: 0.0.0.9000
 Authors@R: 
     person("Mack", "Case", , "hcase@smith.edu", role = c("aut", "cre"),
@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID"))
     person("Michel", "Ruiz-Fuentes", , "mruizfuentes@smith.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The goal of this package is to provide a centralized place to clearly visualize the effects of climate change based on key demographics by country. `mpm` is a package that contains data about various greenhouse gas (GHG) emissions, air pollution metrics in terms of Disability-Adjusted Life Years (DALYs) and internal displacement per country based on GDP and population.
 License: MIT + file LICENSE
 Suggests: 
     knitr,
