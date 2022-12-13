@@ -93,7 +93,15 @@ all_data_country("Mexico") %>%
   head(20)
 ```
 
+From the table generated above, we can look at the trends of each variable before, in and after 2008 and make inferences how did the Great Recessions affected these metrics in Mexico.
+
 ### Question 3
-**Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?**
+**Will a country have exceeded a given threshold in terms of total GHG in a certain year, holding everything else constant?**
 
+Let's say the hard threshold in terms of GHG emissions is 5000 million tonnes (fictional number). Will Canada exceed this threshold in 2040?
 
+```{r}
+ghg_predict(2040, "Canada")
+```
+
+In 2040, holding all else constant, Canada is estimated to release 1094 million tonnes of GHG emissions. This is still below our fictional threshold level. However, referring the warning given in the output, this prediction is based off of a linear model and not off of an exponential one which is more likely.
