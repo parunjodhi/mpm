@@ -46,8 +46,7 @@ dalys_predict <- function(pred_year, nation = "United States"){
 
   paste0("The Total DALYs predicted for ", nation, " for the year ", pred_year, " is ",
          pred_value_air, " total years. Each person will suffer from an average loss in about ",
-         dalys_per_person, " years due to health issues that arose from air pollution.
-         The total predicted ghg is ", pred_value_ghg, " million tonnes.")
+         dalys_per_person, " years due to health issues that arose from air pollution. The total predicted ghg is ", pred_value_ghg, " million tonnes.")
 
 }
 
