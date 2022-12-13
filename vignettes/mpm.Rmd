@@ -41,8 +41,17 @@ The `owid_ghg` and `air_data` datasets also include the total values of all the 
 
 A number of different climate-change related questions can be answered using the tools this package provides us. Some include:
 
-  1. k
-  2. s
-  3. l
+  1. Compare current and predicted total GHG emissions among different North American countries.
+  2. How did the Great Recession of 2008 affect a country?
+  3. Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?
+  
+### Question 1
+Compare current and predicted total GHG emissions among different North American countries.
+
+### Question 2
+How did the Great Recession of 2008 affect a country?
+
+### Question 3
+Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?
 
 
