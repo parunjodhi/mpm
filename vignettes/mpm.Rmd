@@ -46,12 +46,54 @@ A number of different climate-change related questions can be answered using the
   3. Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?
   
 ### Question 1
-Compare current and predicted total GHG emissions among different North American countries.
+**Compare current and predicted total GHG emissions among different North American countries.**
+
+Let's say climate activists in the Honduras are arguing the disproportionate consequences that Honduras faced due to natural disasters (arguably exacerbated by climate change) as compared to the United States who emits way more GHG emissions.
+
+Therefore, let's look at the 2019 level of GHG emitted in both Honduras and the United States.
+
+```{r}
+owid_ghg %>%
+  filter(country == "Honduras") %>%
+  filter(year == 2019)
+
+```
+
+```{r}
+owid_ghg %>%
+  filter(country == "United States") %>%
+  filter(year == 2019)
+
+```
+
+The total GHG emissions in Honduras in 2019 is 28.1 million tonnes. The total GHG emissions in the United States in 2019 is 5771 million tonnes, which is 200 times more that what Honduras emitted for that year. 
+
+What happens if no additional actions are taken to curb the GHG emissions? For example, what would then be the level of total GHG emissions for these 2 countries in 2030?
+
+```{r}
+ghg_predict(2030, "Honduras")
+```
+
+```{r}
+ghg_predict(2030)
+```
+
+Holding all else constant, in 2030, the predicted GHG emissions in Honduras is estimated to be 32.8 million tonnes while that for the United States is estimated to be 5990 million tonnes.
+
+The climate activists can therefore use some of the tools above to prove their argument.
 
 ### Question 2
-How did the Great Recession of 2008 affect a country?
+**How did the Great Recession of 2008 affect a country?**
+
+Let's look at what happened in and around 2008 in Mexico.
+
+```{r}
+all_data_country("Mexico") %>%
+  filter(year >= 2000) %>%
+  head(20)
+```
 
 ### Question 3
-Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?
+**Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?**
 
 

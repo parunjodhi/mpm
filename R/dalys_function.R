@@ -21,10 +21,11 @@ dalys_predict <- function(pred_year, nation = "United States"){
     filter(country == nation)
 
   all_data <- owid_data %>%
-    full_join(air_pol_data, by = "country") %>%
-    select(-year.y) %>%
-    mutate(year = year.x) %>%
-    select(-year.x)
+    full_join(air_pol_data, by = "year") %>%
+    select(-country.y) %>%
+    mutate(country = country.x) %>%
+    select(-country.x) %>%
+    select(year, country, everything())
 
   if(sum(is.na(all_data)) == nrow(all_data)) {
     stop(paste("Data missing for ", nation))

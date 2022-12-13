@@ -108,7 +108,7 @@ dalys_predict(2045)
 #> Warning in dalys_predict(2045): This prediction is based off of a generalized
 #> linear regression model, even if the data might not follow a linear pattern over
 #> the years. This is for estimation purposes only.
-#> [1] "The Total DALYs predicted for United States for the year 2045 is 1998630 total years. Each person will suffer from an average loss in about 0.005114 years due to health issues that arose from air pollution. The Total Predicted GHG is 6025.917 million tonnes."
+#> [1] "The Total DALYs predicted for United States for the year 2045 is 281493 total years. Each person will suffer from an average loss in about 0.00072 years due to health issues that arose from air pollution. The Total Predicted GHG is 6025.917 million tonnes."
 ```
 
 2.  If all else stays constant, what would be the GDP for Mexico in

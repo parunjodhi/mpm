@@ -266,11 +266,11 @@ all_data_country <- function(nation) {
     filter(country == nation)
 
   all_data <- owid_data %>%
-    full_join(air_pol_data, by = "country") %>%
-    select(-year.y) %>%
-    mutate(year = year.x) %>%
-    select(-year.x) %>%
-    select(year, everything())
+    full_join(air_pol_data, by = "year") %>%
+    select(-country.y) %>%
+    mutate(country = country.x) %>%
+    select(-country.x) %>%
+    select(year, country, everything())
 
   return(all_data)
 }
