@@ -34,11 +34,11 @@ library(mpm)
 
 ## Datasets Included
 
--   `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
-    Emissions filtered for countries in North America.
--   `air_data`: A dataset looking at air pollution in terms of DALYS
-    filtered for countries in North America.
--   `regional_grouping`:
+- `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
+  Emissions filtered for countries in North America.
+- `air_data`: A dataset looking at air pollution in terms of DALYS
+  filtered for countries in North America.
+- `regional_grouping`:
 
 ### Example: Air Pollution Data Measured in DALYS
 
@@ -57,19 +57,19 @@ head(air_data)
 
 ## Functions Included
 
--   `population_plot`: Graphs population of a country over the years.
--   `gdp_plot`: Graphs GDP of a country over the years.
--   `ghg_plot`: Graphs GHG of a country over the years.
--   `all_demographics`: Graphs separately population, GDP and GHG of a
-    country over the years.
--   `population_predict`: Predict the population for a country for a
-    specific year.
--   `gdp_predict`: Predict the GDP for a country for a specific year.
--   `ghg_predict`: Predict the total GHG for a country for a specific
-    year.
--   `all_data_country`: Gather data from all data sets for a country.
--   `dalys_predict`: Predict DALYS and total GHG for a country for a
-    specific year.
+- `population_plot`: Graphs population of a country over the years.
+- `gdp_plot`: Graphs GDP of a country over the years.
+- `ghg_plot`: Graphs GHG of a country over the years.
+- `all_demographics`: Graphs separately population, GDP and GHG of a
+  country over the years.
+- `population_predict`: Predict the population for a country for a
+  specific year.
+- `gdp_predict`: Predict the GDP for a country for a specific year.
+- `ghg_predict`: Predict the total GHG for a country for a specific
+  year.
+- `all_data_country`: Gather data from all data sets for a country.
+- `dalys_predict`: Predict DALYS and total GHG for a country for a
+  specific year.
 
 ## Basic Usage
 
@@ -128,6 +128,6 @@ please refer to the
 
 ## Contributors
 
--   [Mack Case](https://github.com/mcase07)
--   [Michel Ruiz-Fuentes](https://github.com/michelruizfuentes)
--   [Parunjodhi Munisamy](https://github.com/parunjodhi)
+- [Mack Case](https://github.com/mcase07)
+- [Michel Ruiz-Fuentes](https://github.com/michelruizfuentes)
+- [Parunjodhi Munisamy](https://github.com/parunjodhi)
