@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mpm
+# mpm <img src='data-raw/hex-mpm.png' align="right" height="160"/>
 
 <!-- badges: start -->
 
