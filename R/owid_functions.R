@@ -1,4 +1,4 @@
-globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population", "lm", "predict", "owid_data", "air_pol_data", "all_data", "air_data", "country.y", "country.x"))
+globalVariables(c("owid_ghg", "country", "year", "gdp", "owid_ghg", "total_ghg", "population", "lm", "predict", "owid_data", "air_pol_data", "all_data", "air_data", "country.y", "country.x", "displaced_by_disaster"))
 
 
 #' Population for a specific country over the years
