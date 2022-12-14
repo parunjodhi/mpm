@@ -265,9 +265,14 @@ all_data_country <- function(nation) {
   air_pol_data <- air_data %>%
     filter(country == nation)
 
+  int_displ <- displaced_by_disaster %>%
+    filter(country == nation)
+
   all_data <- owid_data %>%
     full_join(air_pol_data, by = "year") %>%
+    full_join(int_displ, by = "year") %>%
     select(-country.y) %>%
+    select(-country) %>%
     mutate(country = country.x) %>%
     select(-country.x) %>%
     select(year, country, everything())

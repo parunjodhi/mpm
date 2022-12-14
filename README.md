@@ -39,6 +39,8 @@ library(mpm)
 - `air_data`: A dataset looking at air pollution in terms of DALYS
   filtered for countries in North America.
 - `regional_grouping`:
+- `displaced_by_disaster`: A dataset looking at internal displacement
+  counts due to extreme events caused by climate change.
 
 ### Example: Air Pollution Data Measured in DALYS
 
