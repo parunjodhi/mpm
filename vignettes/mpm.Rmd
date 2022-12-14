@@ -23,9 +23,9 @@ library(ggplot2)
 The `mpm` package contains data on CO2 and Greenhouse Gas (GHG) emissions, pollution (air, household and outdoor pollution) in terms of Disability-Adjusted Life Years (DALYs) and internal displacement within countries.
 
 ## The Why?
-We wanted to create a centralized package that could give users in a quick glance a picture of climate change in any North American country and how it is affecting the people of that country.
+We wanted to create a centralized package that, in a quick glance, could give users a picture of climate change in any North American country and see how it is affecting the people of that country.
 
-## To Who?
+## For Who?
 This package would find excellent use by governmental agencies to determine how their GHG emissions are affecting their communities.
 
 ## Datasets Included
@@ -33,7 +33,7 @@ This package would find excellent use by governmental agencies to determine how 
   - `air_data`: dataset on different types of air pollution measured in DALYs from 1990-2019
   - `regional_grouping`:
 
-The `mpm` datasets only look at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, Saint Kitts and Nevis. 
+The `mpm` datasets only look at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, and Saint Kitts and Nevis. 
 
 The `owid_ghg` and `air_data` datasets also include the total values of all the countries for each variable in a row value *North America*.
 
@@ -48,7 +48,7 @@ A number of different climate-change related questions can be answered using the
 ### Question 1
 **Compare current and predicted total GHG emissions among different North American countries.**
 
-Let's say climate activists in the Honduras are arguing the disproportionate consequences that Honduras faced due to natural disasters (arguably exacerbated by climate change) as compared to the United States who emits way more GHG emissions.
+Let's say climate activists in Honduras are arguing that Honduras has faced disproportionate consequences due to natural disasters (arguably exacerbated by climate change) in comparison to the United States who puts out more GHG emissions.
 
 Therefore, let's look at the 2019 level of GHG emitted in both Honduras and the United States.
 
@@ -80,7 +80,7 @@ ghg_predict(2030)
 
 Holding all else constant, in 2030, the predicted GHG emissions in Honduras is estimated to be 32.8 million tonnes while that for the United States is estimated to be 5990 million tonnes.
 
-The climate activists can therefore use some of the tools above to prove their argument.
+The climate activists can therefore use some of the tools above to help prove their argument.
 
 ### Question 2
 **How did the Great Recession of 2008 affect a country?**
@@ -93,7 +93,7 @@ all_data_country("Mexico") %>%
   head(20)
 ```
 
-From the table generated above, we can look at the trends of each variable before, in and after 2008 and make inferences how did the Great Recessions affected these metrics in Mexico.
+From the table generated above, we can look at the trends of each variable before, in and after 2008 and make inferences about how  the Great Recessions affected these metrics in Mexico.
 
 ### Question 3
 **Will a country have exceeded a given threshold in terms of total GHG in a certain year, holding everything else constant?**
@@ -104,4 +104,4 @@ Let's say the hard threshold in terms of GHG emissions is 5000 million tonnes (f
 ghg_predict(2040, "Canada")
 ```
 
-In 2040, holding all else constant, Canada is estimated to release 1094 million tonnes of GHG emissions. This is still below our fictional threshold level. However, referring the warning given in the output, this prediction is based off of a linear model and not off of an exponential one which is more likely.
+In 2040, holding all else constant, Canada is estimated to release 1094 million tonnes of GHG emissions. This is still below our fictional threshold level. However, as the warning given in the output states, this prediction is based off of a linear model and not off of an exponential one which may be more likely.
