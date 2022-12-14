@@ -36,3 +36,23 @@
 #' }
 #' @source <https://ourworldindata.org/air-pollution>
 "air_data"
+#'
+#'
+#'
+#'
+#' Internally Displaced Count in North America Based on Extreme Events Caused by Climate Change (2008-2021)
+#'
+#' A subset of data on internal displacement associated with slow-onset environmental change and natural disasters filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
+#'
+#' @format ## `displaced_by_disaster`
+#' A data frame with 294 rows and 3 columns:
+#'
+#' \describe{
+#'   \item{year}{Years of observation, from 2008-2021}
+#'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
+#'   \item{displaced_count}{Internal displaced people based on weather-related disasters such as floods or storms}
+#'   ...
+#' }
+#'
+#' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
+"displaced_by_disaster"

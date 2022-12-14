@@ -69,4 +69,24 @@ usethis::use_data(regional_grouping, overwrite = TRUE)
 
 ## code for `DISPLACED_BY_DISASTER` data set
 
-displaced_by_disaster <- read_csv("data-raw/WB_Country_API_displacement.csv")
+library(readxl)
+library(tidyr)
+
+displaced_by_disaster <- read_xls("data-raw/WB_Country_API_displacement.xls")
+
+displaced_by_disaster <- displaced_by_disaster %>%
+  rename(country = CountryName, country_code = CountryCode, indicator_name = IndicatorName, indicator_code = IndicatorCode) %>%
+  select(country, "2008", "2009","2010", "2011", "2012", "2013", "2014", "2015", "2016","2017", "2018", "2019", "2020", "2021")
+
+displaced_by_disaster <-
+  displaced_by_disaster %>% pivot_longer(
+    cols = !country_code,
+    names_to = "year",
+    names_transform = list(year = as.integer),
+    values_to = "displaced_count",
+    values_transform = list(displaced_count = as.integer))
+
+View(displaced_by_disaster)
+
+  #pivot_longer(!country, names_to = "year", values_to = "displaced_count")
+
