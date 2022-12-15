@@ -40,7 +40,7 @@
 #'
 #'
 #'
-#' Internally Displaced People Count based on events caused by Climate Change (2008-2021)
+#' Internally Displaced Count based on events caused by Climate Change (2008-2021)
 #'
 #' A subset of data on internal displacement associated with slow-onset environmental change and natural disasters filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
 #'
