@@ -22,7 +22,6 @@ usethis::use_data(owid_ghg, overwrite = TRUE)
 
 library(janitor)
 air_data <- read_csv("data-raw/disease-burden-by-risk-factor.csv")
-
 air_data <- clean_names(air_data)
 air_data$entity[air_data$entity=="North America (WB)"]<-"North America"
 
@@ -54,7 +53,7 @@ regional_grouping$TableName[regional_grouping$TableName=="St. Kitts and Nevis"]<
 
 regional_grouping <- regional_grouping %>%
   select(TableName, Region, IncomeGroup) %>%
-  rename(country = TableName, Income_Group = IncomeGroup) %>%
+  rename(country = TableName, region = Region, income_group = IncomeGroup) %>%
   filter(country == "United States" | country == "Mexico" | country == "Canada" |
            country == "Bermuda" | country == "Guatemala" | country == "Cuba" | country == "Haiti" |
            country == "Dominican Republic" | country == "Honduras" | country == "Nicaragua" |
@@ -72,7 +71,6 @@ usethis::use_data(regional_grouping, overwrite = TRUE)
 library(readxl)
 library(tidyr)
 library(dplyr)
-
 displaced_by_disaster <- read_xls("data-raw/WB_Country_API_displacement.xls")
 displaced_by_disaster$TableName[displaced_by_disaster$TableName=="Bahamas, The"]<-"Bahamas"
 displaced_by_disaster$TableName[displaced_by_disaster$TableName=="St. Lucia"]<-"Saint Lucia"
@@ -100,3 +98,4 @@ displaced_by_disaster <- displaced_by_disaster %>%
   select(country, year, displaced_count, income_group)
 
 usethis::use_data(displaced_by_disaster, overwrite = TRUE)
+
