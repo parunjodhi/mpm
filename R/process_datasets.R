@@ -40,6 +40,25 @@
 #'
 #'
 #'
+#' Displaced people count based on natural disasters caused by Climate Change (2008-2021)
+#'
+#' A subset of data on internal displacement associated with slow-onset environmental change and natural disasters filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
+#'
+#' @format ## `displaced_by_disaster`
+#' A data frame with 294 rows and 3 columns:
+#'
+#' \describe{
+#'   \item{year}{Years of observation, from 2008-2021}
+#'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
+#'   \item{displaced_count}{Count for internally displaced people based on weather-related disasters such as floods or storms}
+#'   ...
+#' }
+#' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
+"displaced_by_disaster"
+#'
+#'
+#'
+#'
 #' Internally Displaced Count based on events caused by Climate Change (2008-2021)
 #'
 #' A subset of data on internal displacement associated with slow-onset environmental change and natural disasters filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
@@ -51,6 +70,7 @@
 #'   \item{year}{Years of observation, from 2008-2021}
 #'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
 #'   \item{displaced_count}{Count for internally displaced people based on weather-related disasters such as floods or storms}
+#'   \item{income_group}{Indication of a country's economy: high income, low & middle income, low income, lower middle income, middle income, upper middle income}
 #'   ...
 #' }
 #' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
