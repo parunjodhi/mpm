@@ -56,22 +56,3 @@
 #' }
 #' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
 "displaced_by_disaster"
-
-#'
-#'
-#'
-#' North American countries grouped into regions and distinguished by economic class (2008-2021)
-#'
-#' A subset of data listing the regions and income-level classification (ex: high income). This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
-#'
-#' @format ## `regional_grouping`
-#' A data frame with 24 rows and 3 columns:
-#'
-#' \describe{
-#'   \item{year}{Years of observation, from 2008-2021}
-#'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
-#'   \item{region}{Regional grouping of countries in North America}
-#'   ...
-#' }
-#' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
-"regional_grouping"
