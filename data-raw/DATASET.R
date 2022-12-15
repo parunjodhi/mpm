@@ -94,7 +94,10 @@ displaced_by_disaster <- displaced_by_disaster %>%
            country == "Barbados" | country == "Saint Lucia" | country == "Grenada" |
            country == "Saint Vincent and the Grenadines" |
            country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
-           country == "North America")
+           country == "North America") %>%
+  inner_join(regional_grouping, by="country") %>%
+  rename(income_group = Income_Group) %>%
+  select(country, year, displaced_count, income_group)
 
 usethis::use_data(displaced_by_disaster, overwrite = TRUE)
 
