@@ -1,6 +1,6 @@
-#' Distribution of the range of people displaced by natural disasters and climate change
+#' Distribution of the range of people displaced, in a specific country, by natural disasters and climate change
 #'
-#' This function visualizes the distribution of internally displaced people based on a specific country (default: USA)
+#' This function visualizes the distribution of internally displaced people in a specific country (default: USA)
 #'
 #' @param nation Name of country (default: United States)
 #'
@@ -25,7 +25,6 @@ displacement_histogram() <-
   displaced_histogram <-
     ggplot(histo_data, aes(x = displaced_count)) +
     geom_histogram(colour = "#C04000") +
-    scale_y_continuous(labels = comma) +
     labs(
       x = "Internally Displaced People",
       y = "count",
