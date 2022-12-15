@@ -64,7 +64,7 @@ regional_grouping <- regional_grouping %>%
            country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
            country == "North America")
 
-usethis::use_data(regional_grouping, overwrite = TRUE)
+#usethis::use_data(regional_grouping, overwrite = TRUE)
 
 ## code for `DISPLACED_BY_DISASTER` data set
 
@@ -94,8 +94,6 @@ displaced_by_disaster <- displaced_by_disaster %>%
            country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
            country == "North America") %>%
   inner_join(regional_grouping, by="country") %>%
-  rename(income_group = Income_Group) %>%
   select(country, year, displaced_count, income_group)
 
 usethis::use_data(displaced_by_disaster, overwrite = TRUE)
-
