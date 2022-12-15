@@ -100,6 +100,3 @@ displaced_by_disaster <- displaced_by_disaster %>%
   select(country, year, displaced_count, income_group)
 
 usethis::use_data(displaced_by_disaster, overwrite = TRUE)
-
-
-
