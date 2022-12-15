@@ -1,4 +1,3 @@
-
 #' Predict Disability Adjusted Life Years and Total Greenhouse Gas emissions in million tonnes for a specific country in a future year
 #'
 #' @param pred_year Year for the predicted values
@@ -34,7 +33,6 @@ dalys_predict <- function(pred_year, nation = "United States"){
   dalys_model_air <- lm(air_pollution ~ year, data = all_data)
   ghg_model <- lm(total_ghg ~ year, data = all_data)
   pop_model <- lm(population ~ year, data = all_data)
-
 
 
   pred_value_air <- round(predict(dalys_model_air, data.frame(year = pred_year), digits = 3))
