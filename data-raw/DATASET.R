@@ -71,22 +71,32 @@ usethis::use_data(regional_grouping, overwrite = TRUE)
 
 library(readxl)
 library(tidyr)
+library(dplyr)
 
 displaced_by_disaster <- read_xls("data-raw/WB_Country_API_displacement.xls")
+displaced_by_disaster$TableName[displaced_by_disaster$TableName=="Bahamas, The"]<-"Bahamas"
+displaced_by_disaster$TableName[displaced_by_disaster$TableName=="St. Lucia"]<-"Saint Lucia"
+displaced_by_disaster$TableName[displaced_by_disaster$TableName=="St. Vincent and the Grenadines"]<-"Saint Vincent and the Grenadines"
+displaced_by_disaster$TableName[displaced_by_disaster$TableName=="St. Kitts and Nevis"]<-"Saint Kitts and Nevis"
 
 displaced_by_disaster <- displaced_by_disaster %>%
-  rename(country = CountryName, country_code = CountryCode, indicator_name = IndicatorName, indicator_code = IndicatorCode) %>%
-  select(country, "2008", "2009","2010", "2011", "2012", "2013", "2014", "2015", "2016","2017", "2018", "2019", "2020", "2021")
+  rename(country = CountryName, country_code = CountryCode, indicator_name =
+        IndicatorName, indicator_code = IndicatorCode) %>%
+  select(country, "2008", "2009","2010", "2011", "2012", "2013", "2014",
+         "2015", "2016","2017", "2018", "2019", "2020", "2021") %>%
+  pivot_longer(cols = !country, names_to = "year", names_transform = list(year = as.integer),
+          values_to = "displaced_count", values_transform = list(displaced_count = as.integer)) %>%
+  filter(country == "United States" | country == "Mexico" | country == "Canada" |
+           country == "Bermuda" | country == "Guatemala" | country == "Cuba" | country == "Haiti" |
+           country == "Dominican Republic" | country == "Honduras" | country == "Nicaragua" |
+           country == "El Salvador" | country =="Costa Rica" | country == "Panama" | country == "Jamaica" |
+           country == "Trinidad and Tobago" | country == "Belize" | country == "Bahamas" |
+           country == "Barbados" | country == "Saint Lucia" | country == "Grenada" |
+           country == "Saint Vincent and the Grenadines" |
+           country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
+           country == "North America")
 
-displaced_by_disaster <-
-  displaced_by_disaster %>% pivot_longer(
-    cols = !country_code,
-    names_to = "year",
-    names_transform = list(year = as.integer),
-    values_to = "displaced_count",
-    values_transform = list(displaced_count = as.integer))
+usethis::use_data(displaced_by_disaster, overwrite = TRUE)
 
-View(displaced_by_disaster)
 
-  #pivot_longer(!country, names_to = "year", values_to = "displaced_count")
 

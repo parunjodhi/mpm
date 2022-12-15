@@ -50,9 +50,8 @@
 #' \describe{
 #'   \item{year}{Years of observation, from 2008-2021}
 #'   \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
-#'   \item{displaced_count}{Internal displaced people based on weather-related disasters such as floods or storms}
+#'   \item{displaced_count}{Count for internally displaced people based on weather-related disasters such as floods or storms}
 #'   ...
 #' }
-#'
 #' @source <https://data.worldbank.org/indicator/VC.IDP.NWDS>
 "displaced_by_disaster"
