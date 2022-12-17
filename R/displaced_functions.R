@@ -26,7 +26,7 @@ displacement_histogram <-
 
   displaced_histogram <-
     ggplot(histo_data, aes(x = displaced_count)) +
-    geom_histogram(col="#957DAD") +
+    geom_histogram(fill="#69b3a2", color="#e9ecef", alpha=0.9) +
     labs(
       x = "Internally Displaced People",
       y = "count",
