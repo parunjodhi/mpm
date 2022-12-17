@@ -3,16 +3,17 @@
 \docType{data}
 \name{displaced_by_disaster}
 \alias{displaced_by_disaster}
-\title{Internally Displaced Count in North America Based on Extreme Events Caused by Climate Change (2008-2021)}
+\title{Internally displaced people count based on factors such as natural disasters inflicted by Climate Change (2008-2021)}
 \format{
 \subsection{\code{displaced_by_disaster}}{
 
-A data frame with 294 rows and 3 columns:
+A data frame with 294 rows and 4 columns:
 
 \describe{
 \item{year}{Years of observation, from 2008-2021}
 \item{country}{Lists the 23 countries in North America plus North America (totaling everything)}
-\item{displaced_count}{Internal displaced people based on weather-related disasters such as floods or storms}
+\item{displaced_count}{Count for internally displaced people based on conflict, violence, or weather-related disasters. Wikipedia defines an internally displaced person as someone who is forced to leave their home but who remains within their country's borders}
+\item{income_group}{Indication of a country's economy: high income, low & middle income, low income, lower middle income, middle income, upper middle income}
 ...
 }
 }
@@ -24,6 +25,6 @@ A data frame with 294 rows and 3 columns:
 displaced_by_disaster
 }
 \description{
-A subset of data on internal displacement associated with slow-onset environmental change and natural disasters filtered by countries in North America. This data comes from \href{https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change}{Internal Displacement Monitoring Centre (IDMC)} and organized by \href{https://data.worldbank.org/indicator/VC.IDP.NWDS}{The World Bank}.
+A subset of data counting individuals internally displaced due to conflict, violence and environmental changes filtered by countries in North America. This data comes from \href{https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change}{Internal Displacement Monitoring Centre (IDMC)} and organized by \href{https://data.worldbank.org/indicator/VC.IDP.NWDS}{The World Bank}.
 }
 \keyword{datasets}
