@@ -31,7 +31,7 @@ This package would find excellent use by governmental agencies to determine how 
 ## Datasets Included
   - `owid_ghg`: dataset on CO2 and GHG emissions from 1940-2020
   - `air_data`: dataset on different types of air pollution measured in DALYs from 1990-2019
-  - `regional_grouping`:
+  - `regional_grouping`: dataset grouping North American countries into regions by economic class
   - `displaced_by_disaster`: dataset on internal displacement counts due to extreme events caused by climate change.
 
 The `mpm` datasets only look at North American countries which include: United States, Mexico, Canada, Bermuda, Guatemala, Cuba, Haiti, Dominican Republic, Honduras, Nicaragua, El Salvador, Costa Rica, Panama, Jamaica, Trinidad and Tobago, Belize, Bahamas, Barbados, Saint Lucia, Grenada, Saint Vincent and the Grenadines, Antigua and Barbuda, Dominica, and Saint Kitts and Nevis. 

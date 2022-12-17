@@ -39,7 +39,7 @@ library(mpm)
 ## Datasets Included
   + `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG) Emissions filtered for countries in North America.
   + `air_data`: A dataset looking at air pollution in terms of DALYS filtered for countries in North America.
-  + `regional_grouping`:
+  + `regional_grouping`: A dataset grouping North American countries into regions by economic class
   + `displaced_by_disaster`: A dataset looking at internal displacement counts due to extreme events caused by climate change.
   
 ### Example: Air Pollution Data Measured in DALYS
@@ -57,6 +57,7 @@ head(air_data)
   + `ghg_predict`: Predict the total GHG for a country for a specific year.
   + `all_data_country`: Gather data from all data sets for a country.
   + `dalys_predict`: Predict DALYS and total GHG for a country for a specific year.
+  +  `displacement_histogram`: Distribution of people internally displaced in a country.
   
 ## Basic Usage
 These are a few examples of how to use the package and its functions to wrangle and visualize data related to demographics and emissions in countries in North America.

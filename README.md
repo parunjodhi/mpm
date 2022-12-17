@@ -38,7 +38,8 @@ library(mpm)
   Emissions filtered for countries in North America.
 - `air_data`: A dataset looking at air pollution in terms of DALYS
   filtered for countries in North America.
-- `regional_grouping`:
+- `regional_grouping`: A dataset grouping North American countries into
+  regions by economic class
 - `displaced_by_disaster`: A dataset looking at internal displacement
   counts due to extreme events caused by climate change.
 
@@ -72,6 +73,8 @@ head(air_data)
 - `all_data_country`: Gather data from all data sets for a country.
 - `dalys_predict`: Predict DALYS and total GHG for a country for a
   specific year.
+- `displacement_histogram`: Distribution of people internally displaced
+  in a country.
 
 ## Basic Usage
 
