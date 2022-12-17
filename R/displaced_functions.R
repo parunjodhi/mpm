@@ -26,10 +26,13 @@ displacement_histogram <-
 
   displaced_histogram <-
     ggplot(histo_data, aes(x = displaced_count)) +
-    geom_histogram(fill="#69b3a2", color="#e9ecef", alpha=0.9) +
+    geom_histogram(fill="#69b3a2", color="#e9ecef", alpha=0.9, bins=20) +
     labs(
       x = "Internally Displaced People",
       y = "count",
       title = paste("Distribution of Displaced Individuals in", nation, "from 2008-2021"))
+
+  if(sum(is.na(histo_data)) == nrow(histo_data)) {
+    stop(paste("Data missing for ", displaced_count))}
 
   return(displaced_histogram)}
