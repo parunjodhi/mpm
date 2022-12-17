@@ -64,7 +64,7 @@ regional_grouping <- regional_grouping %>%
            country == "Antigua and Barbuda" | country == "Dominica" | country == "Saint Kitts and Nevis" |
            country == "North America")
 
-#usethis::use_data(regional_grouping, overwrite = TRUE)
+usethis::use_data(regional_grouping, overwrite = TRUE)
 
 ## code for `DISPLACED_BY_DISASTER` data set
 
