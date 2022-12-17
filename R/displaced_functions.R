@@ -26,10 +26,10 @@ displacement_histogram <-
 
   displaced_histogram <-
     ggplot(histo_data, aes(x = displaced_count)) +
-    geom_histogram(fill = "#C04000") +
+    geom_histogram(color="#C04000", fill="ffffff") +
     labs(
       x = "Internally Displaced People",
       y = "count",
-      title = paste("Distribution of Displaced Individuals in ", nation, "from 2008-2021"))
+      title = paste("Distribution of Displaced Individuals in", nation, "from 2008-2021"))
 
   return(displaced_histogram)}
