@@ -25,5 +25,6 @@ Imports:
   ggplot2,
   dplyr,
   ggpubr,
-  scales
+  scales,
+  tidyr
 VignetteBuilder: knitr
