@@ -32,7 +32,4 @@ displacement_histogram <-
       y = "count",
       title = paste("Distribution of Displaced Individuals in", nation, "from 2008-2021"))
 
-  if(sum(is.na(histo_data)) == nrow(histo_data)) {
-    stop(paste("Data missing for ", displaced_count))}
-
   return(displaced_histogram)}
