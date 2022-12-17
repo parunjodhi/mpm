@@ -89,9 +89,9 @@ The climate activists can therefore use some of the tools above to help prove th
 Let's look at what happened in and around 2008 in Mexico.
 
 ```{r}
-all_data_country("Mexico") %>%
-  filter(year >= 2000) %>%
-  head(20)
+#all_data_country("Mexico") 
+  #filter(year >= 2000) %>%
+  #head(20)
 ```
 
 From the table generated above, we can look at the trends of each variable before, in and after 2008 and make inferences about how  the Great Recessions affected these metrics in Mexico.
