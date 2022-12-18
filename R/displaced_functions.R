@@ -65,3 +65,4 @@ displaced_linegraph <-
         title = paste("Internally Displaced People Displaced Individuals in", nation, "from 2008-2021"))
 
     return(line_displaced)}
+
