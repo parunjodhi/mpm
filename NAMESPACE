@@ -3,6 +3,7 @@
 export(all_data_country)
 export(all_demographics)
 export(dalys_predict)
+export(displaced_areachart)
 export(displaced_histogram)
 export(displaced_linegraph)
 export(gdp_plot)
