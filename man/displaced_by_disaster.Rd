@@ -3,7 +3,7 @@
 \docType{data}
 \name{displaced_by_disaster}
 \alias{displaced_by_disaster}
-\title{Internally displaced people count based on factors such as natural disasters inflicted by Climate Change (2008-2021)}
+\title{Internally Displacement based events like events such as natural disasters (2008-2021)}
 \format{
 \subsection{\code{displaced_by_disaster}}{
 
@@ -25,6 +25,6 @@ A data frame with 294 rows and 4 columns:
 displaced_by_disaster
 }
 \description{
-A subset of data counting individuals internally displaced due to conflict, violence and environmental changes filtered by countries in North America. This data comes from \href{https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change}{Internal Displacement Monitoring Centre (IDMC)} and organized by \href{https://data.worldbank.org/indicator/VC.IDP.NWDS}{The World Bank}.
+A subset of data counting individuals internally displaced due to conflict, violence and environmental changes (inflicted by climate change) filtered by countries in North America. This data comes from \href{https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change}{Internal Displacement Monitoring Centre (IDMC)} and organized by \href{https://data.worldbank.org/indicator/VC.IDP.NWDS}{The World Bank}.
 }
 \keyword{datasets}
