@@ -2,7 +2,7 @@
 % Please edit documentation in R/displaced_functions.R
 \name{displaced_histogram}
 \alias{displaced_histogram}
-\title{Distribution of the Internally Displaced Individuals Over Thirteen Years (2008-2021)}
+\title{Distribution of the Internally Displaced Individuals (2008-2021)}
 \usage{
 displaced_histogram(nation = "United States")
 }
