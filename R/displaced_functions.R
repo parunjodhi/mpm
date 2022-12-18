@@ -66,7 +66,7 @@ displaced_linegraph <-
       labs(
         x = "Year",
         y = "Total Number of Displaced Individuals",
-        title = paste("Internally Displaced People Displaced Individuals in", nation, "\nfrom 2008-2021"))
+        title = paste("Internally Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
     return(line_displaced)}
 
