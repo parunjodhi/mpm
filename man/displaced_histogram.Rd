@@ -10,7 +10,7 @@ displaced_histogram(nation = "United States")
 \item{nation}{Name of country (default: United States)}
 }
 \value{
-A histogram demonstrating the amount of people displaced based on the country selected
+A histogram demonstrating the amount of people displaced based on the country selected from 2008 to 2021
 }
 \description{
 This function visualizes the distribution of people internally displaced by natural disasters and climate change in a specific country (default: USA)
