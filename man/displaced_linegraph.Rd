@@ -10,10 +10,10 @@ displaced_linegraph(nation = "United States")
 \item{nation}{Name of country (default: United States)}
 }
 \value{
-A line graph and area chart demonstrating the amount of people displaced from 2008 to 2021
+A line graph demonstrating the amount of internally displaced people based on the country selected from 2008 to 2021
 }
 \description{
-This function produces a line graph depicting the toal amount of displaced individuals in a given country (default: USA)
+This function produces a line graph depicting the total amount of individuals internally displaced by events (some inflicted by climate change) in a given country (default: USA)
 }
 \examples{
 displaced_linegraph ()
