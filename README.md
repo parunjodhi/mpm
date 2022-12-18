@@ -34,14 +34,14 @@ library(mpm)
 
 ## Datasets Included
 
-- `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
-  Emissions filtered for countries in North America.
-- `air_data`: A dataset looking at air pollution in terms of DALYS
-  filtered for countries in North America.
-- `regional_grouping`: A dataset grouping North American countries into
-  regions by economic class
-- `displaced_by_disaster`: A dataset looking at internal displacement
-  counts due to extreme events caused by climate change.
+-   `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG)
+    Emissions filtered for countries in North America.
+-   `air_data`: A dataset looking at air pollution in terms of DALYS
+    filtered for countries in North America.
+-   `regional_grouping`: A dataset grouping North American countries
+    into regions by economic class
+-   `displaced_by_disaster`: A dataset looking at internal displacement
+    counts due to extreme events caused by climate change.
 
 ### Example: Air Pollution Data Measured in DALYS
 
@@ -60,23 +60,25 @@ head(air_data)
 
 ## Functions Included
 
-- `population_plot`: Graphs population of a country over the years.
-- `gdp_plot`: Graphs GDP of a country over the years.
-- `ghg_plot`: Graphs GHG of a country over the years.
-- `all_demographics`: Graphs separately population, GDP and GHG of a
-  country over the years.
-- `population_predict`: Predict the population for a country for a
-  specific year.
-- `gdp_predict`: Predict the GDP for a country for a specific year.
-- `ghg_predict`: Predict the total GHG for a country for a specific
-  year.
-- `all_data_country`: Gather data from all data sets for a country.
-- `dalys_predict`: Predict DALYS and total GHG for a country for a
-  specific year.
-- `displaced_histogram`: Distribution of people internally displaced in
-  a country.
-- `displaced_linegraph`: Graph of internal displacement counts over the
-  years for a specific country.
+-   `population_plot`: Graphs population of a country over the years.
+-   `gdp_plot`: Graphs GDP of a country over the years.
+-   `ghg_plot`: Graphs GHG of a country over the years.
+-   `all_demographics`: Graphs separately population, GDP and GHG of a
+    country over the years.
+-   `population_predict`: Predict the population for a country for a
+    specific year.
+-   `gdp_predict`: Predict the GDP for a country for a specific year.
+-   `ghg_predict`: Predict the total GHG for a country for a specific
+    year.
+-   `all_data_country`: Gather data from all data sets for a country.
+-   `dalys_predict`: Predict DALYS and total GHG for a country for a
+    specific year.
+-   `displaced_areachart`: Area Chart of internal displacement comparing
+    the United States with a specific country.
+-   `displaced_histogram`: Distribution of people internally displaced
+    in a country.
+-   `displaced_linegraph`: Graph of internal displacement counts over
+    the years for a specific country.
 
 ## Basic Usage
 
@@ -90,7 +92,6 @@ countries in North America.
 
 ``` r
 displaced_linegraph("Guatemala")
-#> Warning in geom_line(fill = "#800000"): Ignoring unknown parameters: `fill`
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
@@ -136,6 +137,6 @@ please refer to the
 
 ## Contributors
 
-- [Mack Case](https://github.com/mcase07)
-- [Michel Ruiz-Fuentes](https://github.com/michelruizfuentes)
-- [Parunjodhi Munisamy](https://github.com/parunjodhi)
+-   [Mack Case](https://github.com/mcase07)
+-   [Michel Ruiz-Fuentes](https://github.com/michelruizfuentes)
+-   [Parunjodhi Munisamy](https://github.com/parunjodhi)
