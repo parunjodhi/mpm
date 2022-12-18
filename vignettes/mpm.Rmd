@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, warning = FALSE, message = FALSE, include = FALSE}
-library(mpm)
 library(dplyr)
 library(ggplot2)
 ```
@@ -45,6 +44,8 @@ A number of different climate-change related questions can be answered using the
   1. Compare current and predicted total GHG emissions among different North American countries.
   2. How did the Great Recession of 2008 affect a country?
   3. Given a certain year, would a country have exceeded a given threshold in terms of total GHG, holding everything else constant?
+  4. How did a natural disaster in recent years affect internal displacement?
+
   
 ### Question 1
 **Compare current and predicted total GHG emissions among different North American countries.**
@@ -114,3 +115,14 @@ ghg_predict(2040, "Canada")
 ```
 
 In 2040, holding all else constant, Canada is estimated to release 1094 million tonnes of GHG emissions. This is still below our fictional threshold level. However, as the warning given in the output states, this prediction is based off of a linear model and not off of an exponential one which may be more likely.
+
+### Question 4
+**How did a natural disaster in recent years affect internal displacement?**
+
+If we take a look at the internal displacement of the Cuba following Hurricane Irma in 2017, is there a large spike?
+
+```{r}
+displaced_linegraph("Cuba")
+```
+
+In 2017, there was a large spike in the total internally displaced individuals. 
