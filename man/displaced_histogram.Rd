@@ -2,7 +2,7 @@
 % Please edit documentation in R/displaced_functions.R
 \name{displaced_histogram}
 \alias{displaced_histogram}
-\title{Distribution of the range of people displaced, in a specific country, by natural disasters and climate change}
+\title{Distribution of the Internally Displaced Individuals Over Thirteen Years (2008-2021)}
 \usage{
 displaced_histogram(nation = "United States")
 }
@@ -13,7 +13,7 @@ displaced_histogram(nation = "United States")
 A histogram demonstrating the amount of people displaced based on the country selected
 }
 \description{
-This function visualizes the distribution of internally displaced people in a specific country (default: USA)
+This function visualizes the distribution of people internally displaced by natural disasters and climate change in a specific country (default: USA)
 }
 \examples{
 displaced_histogram()
