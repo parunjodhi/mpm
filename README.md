@@ -74,7 +74,7 @@ head(air_data)
 -   `dalys_predict`: Predict DALYS and total GHG for a country for a
     specific year.
 -   `displaced_areachart`: Area Chart of internal displacement comparing
-    the United States with a specific country.
+    the U.S with a specific country.
 -   `displaced_histogram`: Distribution of people internally displaced
     in a country.
 -   `displaced_linegraph`: Graph of internal displacement counts over
