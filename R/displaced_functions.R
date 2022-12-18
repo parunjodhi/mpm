@@ -2,11 +2,11 @@ globalVariables(c("displaced_count", "year", "country"))
 
 #' Distribution of the Internally Displaced Individuals (2008-2021)
 #'
-#' This function visualizes the distribution of people internally displaced by natural disasters and climate change in a specific country (default: USA)
+#' This function visualizes the distribution of people internally displaced by natural disasters (inflicted by climate change) in a specific country (default: USA)
 #'
 #' @param nation Name of country (default: United States)
 #'
-#' @return A histogram demonstrating the amount of people displaced based on the country selected from 2008 to 2021
+#' @return A histogram demonstrating the amount of internally displaced people based on the country selected from 2008 to 2021
 #' @export
 #'
 #' @examples
@@ -30,19 +30,19 @@ displaced_histogram <-
     scale_x_continuous(labels = comma) +
     theme(axis.text.x = element_text(angle=60)) +
     labs(
-      x = "Internally Displaced People",
-      y = "count",
+      x = "Total Number of Displaced Individuals",
+      y = "Count",
       title = paste("Distribution of Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
   return(histo_displaced)}
 
 #' Internally Displaced Individuals Line Graph (2008-2021)
 #'
-#' This function produces a line graph depicting the toal amount of displaced individuals in a given country (default: USA)
+#' This function produces a line graph depicting the total amount of individuals internally displaced by events (some inflicted by climate change) in a given country (default: USA)
 #'
 #' @param nation Name of country (default: United States)
 #'
-#' @return A line graph and area chart demonstrating the amount of people displaced from 2008 to 2021
+#' @return A line graph demonstrating the amount of internally displaced people based on the country selected from 2008 to 2021
 #' @export
 #'
 #' @examples
@@ -68,7 +68,7 @@ displaced_linegraph <-
       labs(
         x = "Year",
         y = "Total Number of Displaced Individuals",
-        title = paste("Line Graph of Displaced Individuals inn", nation, "\nfrom 2008-2021"))
+        title = paste("Line Graph of Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
     return(line_displaced)}
 
