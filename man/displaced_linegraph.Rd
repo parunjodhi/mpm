@@ -2,7 +2,7 @@
 % Please edit documentation in R/displaced_functions.R
 \name{displaced_linegraph}
 \alias{displaced_linegraph}
-\title{Internally Displaced Individuals Over Thirteen Years (2008-2021)}
+\title{Internally Displaced Individuals Line Graph (2008-2021)}
 \usage{
 displaced_linegraph(nation = "United States")
 }
@@ -10,10 +10,10 @@ displaced_linegraph(nation = "United States")
 \item{nation}{Name of country (default: United States)}
 }
 \value{
-A faceted-line graph demonstrating the amount of people displaced from 2008 to 2021 in two countries, or one country and North America
+A line graph and area chart demonstrating the amount of people displaced from 2008 to 2021
 }
 \description{
-This function produces a line graph comparing the amount of displaced individuals over 13 years for two regions (a country and North America, or two countries)(default: USA)
+This function produces a line graph depicting the toal amount of displaced individuals in a given country (default: USA)
 }
 \examples{
 displaced_linegraph ()
