@@ -23,7 +23,7 @@ displaced_histogram <-
     filter(country == nation) %>%
     select(country, displaced_count)
 
-  displaced_histogram <-
+  histo_displaced <-
     ggplot(histo_data, aes(x = displaced_count)) +
     geom_histogram(fill="#69b3a2", color="#e9ecef", alpha=0.9, bins=20) +
     labs(
@@ -31,7 +31,7 @@ displaced_histogram <-
       y = "count",
       title = paste("Distribution of Displaced Individuals in", nation, "from 2008-2021"))
 
-  return(displaced_histogram)}
+  return(histo_displaced)}
 
 #' Line graph comparing the amount of displaced individuals over 13 years for two regions (a country and North America, or two countries)
 #'
@@ -56,7 +56,7 @@ displaced_linegraph <-
       filter(country == nation) %>%
       select(country, year, displaced_count)
 
-    displaced_linegraph <-
+    line_displaced <-
       ggplot(trends_data, aes(x = year, y = displaced_count)) +
       geom_line(fill="#800000") +
       labs(
@@ -64,4 +64,4 @@ displaced_linegraph <-
         y = "Amount of Displaced Individuals",
         title = paste("Internally Displaced People Displaced Individuals in", nation, "from 2008-2021"))
 
-    return(displaced_linegraph)}
+    return(line_displaced)}
