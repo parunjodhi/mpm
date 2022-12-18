@@ -40,9 +40,9 @@
 #'
 #'
 #'
-#' Internally displaced people count based on factors such as natural disasters inflicted by Climate Change (2008-2021)
+#' Internally Displacement based events like events such as natural disasters (2008-2021)
 #'
-#' A subset of data counting individuals internally displaced due to conflict, violence and environmental changes filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
+#' A subset of data counting individuals internally displaced due to conflict, violence and environmental changes (inflicted by climate change) filtered by countries in North America. This data comes from [Internal Displacement Monitoring Centre (IDMC)](https://www.internal-displacement.org/research-areas/Displacement-disasters-and-climate-change) and organized by [The World Bank](https://data.worldbank.org/indicator/VC.IDP.NWDS).
 #'
 #' @format ## `displaced_by_disaster`
 #' A data frame with 294 rows and 4 columns:
