@@ -1,8 +1,8 @@
 globalVariables(c("displaced_count", "year", "country"))
 
-#' Distribution of the range of people displaced, in a specific country, by natural disasters and climate change
+#' Distribution of the Internally Displaced Individuals Over Thirteen Years (2008-2021)
 #'
-#' This function visualizes the distribution of internally displaced people in a specific country (default: USA)
+#' This function visualizes the distribution of people internally displaced by natural disasters and climate change in a specific country (default: USA)
 #'
 #' @param nation Name of country (default: United States)
 #'
@@ -33,9 +33,9 @@ displaced_histogram <-
 
   return(histo_displaced)}
 
-#' Line graph comparing the amount of displaced individuals over 13 years for two regions (a country and North America, or two countries)
+#' Internally Displaced Individuals Over Thirteen Years (2008-2021)
 #'
-#' This function ... specific country (default: USA)
+#' This function produces a line graph comparing the amount of displaced individuals over 13 years for two regions (a country and North America, or two countries)(default: USA)
 #'
 #' @param nation Name of country (default: United States)
 #'
@@ -58,10 +58,10 @@ displaced_linegraph <-
 
     line_displaced <-
       ggplot(trends_data, aes(x = year, y = displaced_count)) +
-      geom_line(fill="#800000") +
+      geom_line() + scale_color_brewer(palette="Accent")
       labs(
         x = "Year",
-        y = "Amount of Displaced Individuals",
+        y = "Total Number of Displaced Individuals",
         title = paste("Internally Displaced People Displaced Individuals in", nation, "from 2008-2021"))
 
     return(line_displaced)}
