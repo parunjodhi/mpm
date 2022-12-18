@@ -4,16 +4,16 @@
 \alias{displaced_areachart}
 \title{Internally Displaced Individuals Area Chart (2008-2021)}
 \usage{
-displaced_areachart(nation = "United States")
+displaced_areachart(nation = "Trinidad and Tobago")
 }
 \arguments{
-\item{nation}{Name of country (default: United States)}
+\item{nation}{Name of country (default: Trinidad and Tobago)}
 }
 \value{
-An area graph and area chart demonstrating the amount of people displaced from 2008 to 2021
+An area chart demonstrating displaced individuals from 2008 to 2021 for a given country compared to the U.S
 }
 \description{
-This function produces an area chart visualizing how the amount of displaced individuals over 13 years for a given country (default: USA)
+This function produces an area chart visualizing the amount of displaced individuals of a given country compared to the U.S (default: Trinidad and Tobago)
 }
 \examples{
 displaced_areachart ()
