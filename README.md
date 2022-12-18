@@ -73,8 +73,10 @@ head(air_data)
 - `all_data_country`: Gather data from all data sets for a country.
 - `dalys_predict`: Predict DALYS and total GHG for a country for a
   specific year.
-- `displacement_histogram`: Distribution of people internally displaced
-  in a country.
+- `displaced_histogram`: Distribution of people internally displaced in
+  a country.
+- `displaced_linegraph`: Graph of internal displacement counts over the
+  years for a specific country.
 
 ## Basic Usage
 
@@ -84,10 +86,11 @@ countries in North America.
 
 ### Data Visualization functions
 
-1.  Visualize the trend in population for Guatemala from 1980 to 2000
+1.  Visualize the trend in internal displacement for Guatemala.
 
 ``` r
-population_plot("Guatemala", 1980, 2000)
+displaced_linegraph("Guatemala")
+#> Warning in geom_line(fill = "#800000"): Ignoring unknown parameters: `fill`
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />

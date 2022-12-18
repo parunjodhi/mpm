@@ -14,6 +14,7 @@ globalVariables(c("displaced_count", "year", "country"))
 #' displaced_histogram("Dominican Republic")
 #' @import ggplot2
 #' @import tidyr
+#' @import scales
 displaced_histogram <-
 
   function(nation = "United States") {
@@ -26,6 +27,7 @@ displaced_histogram <-
   histo_displaced <-
     ggplot(histo_data, aes(x = displaced_count)) +
     geom_histogram(fill="#69b3a2", color="#e9ecef", alpha=0.9, bins=20) +
+    scale_x_continuous(labels = comma) +
     labs(
       x = "Internally Displaced People",
       y = "count",
@@ -47,6 +49,7 @@ displaced_histogram <-
 #' displaced_linegraph("Haiti")
 #' @import ggplot2
 #' @import tidyr
+#' @import scales
 displaced_linegraph <-
 
   function(nation = "United States") {
@@ -59,10 +62,11 @@ displaced_linegraph <-
     line_displaced <-
       ggplot(trends_data, aes(x = year, y = displaced_count)) +
       geom_line(fill="#800000") +
+      scale_y_continuous(labels = comma) +
       labs(
         x = "Year",
         y = "Amount of Displaced Individuals",
-        title = paste("Internally Displaced People Displaced Individuals in", nation, "from 2008-2021"))
+        title = paste("Internally Displaced People Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
     return(line_displaced)}
 
