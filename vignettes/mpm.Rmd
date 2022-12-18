@@ -69,6 +69,14 @@ owid_ghg %>%
 
 The total GHG emissions in Honduras in 2019 is 28.1 million tonnes. The total GHG emissions in the United States in 2019 is 5771 million tonnes, which is 200 times more that what Honduras emitted for that year. 
 
+The activists can also look at internal displacement pattern in Honduras.
+
+```{r}
+displaced_linegraph("Honduras")
+```
+
+There is a substantial increase in displaced individuals in Honduras after 2019 that can be attributed to strong hurricanes they face in the coming years.
+
 What happens if no additional actions are taken to curb the GHG emissions? For example, what would then be the level of total GHG emissions for these 2 countries in 2030?
 
 ```{r}
