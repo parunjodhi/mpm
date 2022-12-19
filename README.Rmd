@@ -65,9 +65,9 @@ head(air_data)
 These are a few examples of how to use the package and its functions to wrangle and visualize data related to demographics and emissions in countries in North America.
 
 ### Data Visualization functions
-  1. Visualize the trend in internal displacement for Guatemala.
+  1. Visualize the trend in internal displacement for Mexico and the U.S.
 ```{r}
-displaced_linegraph("Guatemala")
+displaced_areachart("Mexico")
 ```
 
   2. Visualize the trends in population, GDP and total GHG emissions for Jamaica from 2000 to 2020
