@@ -88,10 +88,15 @@ countries in North America.
 
 ### Data Visualization functions
 
-1.  Visualize the trend in internal displacement for Guatemala.
+1.  Visualize the trend in internal displacement for Mexico and the U.S.
 
 ``` r
-displaced_linegraph("Guatemala")
+displaced_areachart("Mexico")
+#> Warning in displaced_areachart("Mexico"): Some countries have very limited or missing data so please view the
+#>       country's displacement count in the dataframe before using the displaced_areachart function.
+#>       Example: if you choose Bermuda which has a lot of NAs and very limited displacement
+#>       counts than the function will only visualize the count for the United States.
+#> Warning: Removed 1 rows containing non-finite values (`stat_align()`).
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
