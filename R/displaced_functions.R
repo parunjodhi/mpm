@@ -34,6 +34,10 @@ displaced_histogram <-
       y = "Count",
       title = paste("Distribution of Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
+  warning(paste("Some countries have very limited or missing data for the amount of
+      internally displaced individuals so please view the country's dataframe and their
+      displacement count before using the displaced_histogram function for best usage."))
+
   return(histo_displaced)}
 
 #' Internally Displaced Individuals Line Graph (2008-2021)
@@ -70,26 +74,30 @@ displaced_linegraph <-
         y = "Total Number of Displaced Individuals",
         title = paste("Line Graph of Displaced Individuals in", nation, "\nfrom 2008-2021"))
 
+    warning(paste("Some countries have very limited or missing data for the amount of
+      internally displaced individuals so please view the country's dataframe and their
+      displacement count before using the displaced_linegraph function for best usage."))
+
     return(line_displaced)}
 
 #' Internally Displaced Individuals Area Chart (2008-2021)
 #'
-#' This function produces an area chart visualizing the amount of displaced individuals of a given country compared to the U.S (default: Trinidad and Tobago)
+#' This function produces an area chart visualizing the amount of displaced individuals of a given country compared to the U.S (default: Costa Rica)
 #'
-#' @param nation Name of country (default: Trinidad and Tobago)
+#' @param nation Name of country (default: Costa Rica)
 #'
 #' @return An area chart demonstrating displaced individuals from 2008 to 2021 for a given country compared to the U.S
 #' @export
 #'
 #' @examples
 #' displaced_areachart ()
-#' displaced_areachart("Nicaragua")
+#' displaced_areachart("Mexico")
 #' @import ggplot2
 #' @import tidyr
 #' @import scales
 displaced_areachart <-
 
-  function(nation = "Trinidad and Tobago") {
+  function(nation = "Costa Rica") {
 
     area_data <-
       displaced_by_disaster %>%
@@ -109,5 +117,10 @@ displaced_areachart <-
         y = "Total Number of Displaced Individuals",
         title = paste("Area Chart of Displaced Individuals from 2008-2021"),
         subtitle = paste("Comparing", nation ,"and the United States"))
+
+    warning(paste("Some countries have very limited or missing data so please view the
+      country's displacement count in the dataframe before using the displaced_areachart function.
+      Example: if you choose Bermuda which has a lot of NAs and very limited displacement
+      counts than the function will only visualize the count for the United States."))
 
     return(area_displaced)}
