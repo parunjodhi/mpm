@@ -39,7 +39,7 @@ library(mpm)
 ## Datasets Included
   + `owid_ghg`: A dataset looking at CO2 and Greenhouse Gas (GHG) Emissions filtered for countries in North America.
   + `air_data`: A dataset looking at air pollution in terms of DALYS filtered for countries in North America.
-  + `regional_grouping`: A dataset grouping North American countries into regions by economic class
+  + `regional_grouping`: A dataset grouping North American countries into regions by economic class.
   + `displaced_by_disaster`: A dataset looking at internal displacement counts due to extreme events caused by climate change.
   
 ### Example: Air Pollution Data Measured in DALYS
@@ -70,7 +70,7 @@ These are a few examples of how to use the package and its functions to wrangle 
 displaced_areachart("Mexico")
 ```
 
-  2. Visualize the trends in population, GDP and total GHG emissions for Jamaica from 2000 to 2020
+  2. Visualize the trends in population, GDP and total GHG emissions for Jamaica from 2000 to 2020.
 ```{r}
 all_demographics("Jamaica", min_year = 2000)
 ```
